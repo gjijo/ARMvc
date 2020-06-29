@@ -172,6 +172,7 @@
     <Content Include="Content\images\slider-slide-2.jpg" />
     <Content Include="Content\images\slider-slide-3 - Copy.jpg" />
     <Content Include="Content\images\slider-slide-3.jpg" />
+    <Content Include="Content\images\success_tick.svg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
