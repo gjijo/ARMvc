@@ -405,6 +405,9 @@ header.page-header{
     font-weight: 500;
     line-height: 14px;
 }
+.AmountSec label span.Required{
+	color: red;
+}
 .AmountSec input[type="text"]{
 	height: 35px;
 	background: #efecec;
@@ -451,6 +454,80 @@ header.page-header{
     padding-bottom: 5px;
 }
 /*Pay Rent Page Ends here*/
+/*Maintenance Request Page start here*/
+.MaintDetails{
+	padding-top: 10px;
+}
+.MaintDetails h3{
+	margin-top: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 30px;
+    color: #000;
+    border-bottom: 1px solid;
+    padding-bottom: 5px;
+}
+.MaintDetails label{
+	width: 150px;
+	padding-right: 10px;
+	font-size: 14px;
+    font-weight: 500;
+    line-height: 14px;
+}
+.MaintDetails label span.Required{
+	color: red;
+}
+.MaintDetails input[type="text"]{
+	height: 35px;
+	background: #efecec;
+	width: 400px;
+	border: 0;
+	padding: 0 15px 0 10px;
+	text-transform: uppercase;
+	font-weight: 500;
+}
+.MaintDetails textarea{
+	height: 100px;
+	background: #efecec;
+	width: 400px;
+	border: 0;
+	padding: 6px 15px 0 10px;
+	text-transform: capitalize;
+	font-weight: 400;
+}
+::-webkit-input-placeholder { /* Edge */
+  color: #000;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #000;
+}
+::placeholder {
+  color: #000;
+}
+.MaintDetails button{
+	display: inline-block;
+	background: #d2ac67;
+	color: #fff;
+	margin-right: 10px;
+	padding: 0 25px;
+    min-width: 160px;
+    height: 50px;
+    border:none;
+    border-radius: 25px;
+    font-size: 14px;
+    line-height: 50px;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.MaintDetails button:hover {
+  background-color: #000;
+}
+/*Maintenance Request Page Ends here*/
 footer{
 	width: 100%;
 	display: flex;
