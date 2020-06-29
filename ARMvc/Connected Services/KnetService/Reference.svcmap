@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d20bd703-ecfe-485b-8370-6df03a1b462e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:51405/KNETService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="KNETService.disco" MetadataType="Disco" ID="20f5a694-3f3b-4a42-8b63-d136d55df45b" SourceId="1" SourceUrl="http://localhost:51405/KNETService.svc?disco" />
+    <MetadataFile FileName="KNETService.wsdl" MetadataType="Wsdl" ID="e2707d29-7e7a-4180-9296-4c0859e202d9" SourceId="1" SourceUrl="http://localhost:51405/KNETService.svc?wsdl" />
+    <MetadataFile FileName="KNETService.xsd" MetadataType="Schema" ID="d17efddd-1b37-40d8-b83b-833bcb136273" SourceId="1" SourceUrl="http://localhost:51405/KNETService.svc?xsd=xsd0" />
+    <MetadataFile FileName="KNETService1.xsd" MetadataType="Schema" ID="e809452c-22a2-4247-bed7-f3286cd220cc" SourceId="1" SourceUrl="http://localhost:51405/KNETService.svc?xsd=xsd2" />
+    <MetadataFile FileName="KNETService2.xsd" MetadataType="Schema" ID="16f20f43-c068-433c-a58c-a6a399f16276" SourceId="1" SourceUrl="http://localhost:51405/KNETService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
