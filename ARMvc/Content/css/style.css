@@ -97,7 +97,7 @@ p {
 
 header.page-header{
 	width: 100%;
-	height: 64px;
+	height: 80px;
 	display: flex;
 	align-items: center;
 	background: #fff;
@@ -235,7 +235,7 @@ header.page-header{
 	overflow: hidden;
 	background: #002045;
 	color: #fff;
-	/*height: calc(100vh - 64px);*/
+	/*height: calc(100vh - 80px);*/
 	height: 600px;
 }
 
@@ -252,7 +252,6 @@ header.page-header{
 	max-width: 50%;
 	height: 400px;
 	color: #fff;
-	opacity: 0.8;
 }
 .CtaBtn{
 	width: 100%;
@@ -289,7 +288,7 @@ header.page-header{
 	opacity: .4;
 }
 .carousel-item {
-  /*height: calc(100vh - 64px);*/
+  /*height: calc(100vh - 80px);*/
   height: 600px;
   min-height: 350px;
   background: no-repeat center center scroll;
@@ -317,6 +316,141 @@ header.page-header{
     -o-background-size: cover;
     background-size: cover;
 }
+/*Pay Rent Page Start here*/
+.PayPage{
+	width: 100%;
+}
+.InnerTittle{
+	height: 150px;
+	width: 100%;
+	background: url(../images/bg-01.jpg) no-repeat center center;
+	background-size: cover;
+}
+.OverLayBg{
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+}
+.InnerTittle h2{
+	color: #fff;
+}
+.DeatailsSec{
+	width: 100%;
+	padding: 30px 0;
+}
+.TableBox{
+	padding: 18px;
+	background: #ebeeef;
+	border-radius: 10px;
+}
+.TableBox .row{
+	margin-right: 0;
+	margin-left: 0;
+	font-size: 14px;
+	text-align: center;
+
+}
+.TableBox .row>div{
+   padding: 0px 15px;
+   border-right: 1px solid #ebeeef;
+   height: 43px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.TableBox .row:nth-child(even) {background: #efe6d6}
+.TableBox .row:nth-child(odd) {background: #ccc}
+.TableBox .row.HeadRow{
+	font-weight: bold;
+	background: #d2ac67;
+	color: #000;
+}
+.TableBox .row>div span{
+	padding: 0px 15px;
+	font-size: 12px;
+	color: #fff;
+	height: 24px;
+	line-height: 24px;
+	font-weight: 400;
+	background: #000;
+	border-radius: 20px;
+	cursor: pointer;
+	-webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+}
+.TableBox .row>div span:hover{
+	background: #d2ac67;
+}
+.TableBox .row>div span.selected, .TableBox .row>div span.Paid{
+	background: rgba(210, 172, 103, 0.8);
+}
+.AmountSec{
+	padding-top: 30px;
+}
+.AmountSec h3{
+	margin-top: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 30px;
+    color: #000;
+    border-bottom: 1px solid;
+    padding-bottom: 5px;
+}
+.AmountSec label{
+	width: 150px;
+	padding-right: 10px;
+	font-size: 14px;
+    font-weight: 500;
+    line-height: 14px;
+}
+.AmountSec input[type="text"]{
+	height: 35px;
+	background: #efecec;
+	width: 150px;
+	border: 0;
+	padding: 0 15px 0 10px;
+	text-transform: uppercase;
+	font-weight: 500;
+}
+.AmountSec button{
+	display: inline-block;
+	background: #d2ac67;
+	color: #fff;
+	margin-right: 10px;
+	padding: 0 25px;
+    min-width: 160px;
+    height: 50px;
+    border:none;
+    border-radius: 25px;
+    font-size: 14px;
+    line-height: 50px;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.AmountSec button:hover {
+  background-color: #000;
+}
+.Hist_Transac{
+	width: 100%;
+	padding-bottom: 50px;
+}
+.Hist_Transac h3{
+	margin-top: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 30px;
+    color: #000;
+    border-bottom: 1px solid;
+    padding-bottom: 5px;
+}
+/*Pay Rent Page Ends here*/
 footer{
 	width: 100%;
 	display: flex;
