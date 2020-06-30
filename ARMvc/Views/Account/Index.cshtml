@@ -7,9 +7,9 @@
 <head>
     <!-- Site Title-->
     <title>@Html.Resource("AlKhalid")</title>
-    <link rel="stylesheet" type="text/css" href="~/Content/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="~/Content/css/util.css">
-    <link rel="stylesheet" type="text/css" href="~/Content/css/main.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/css/bootstrap_ar.min.css">
+    @*<link rel="stylesheet" type="text/css" href="~/Content/css/util.css">*@
+    <link rel="stylesheet" type="text/css" href="~/Content/css/main_ar.css">
 </head>
 <body>
     <input type="hidden" id="HomeURL" value="@Url.Action("Index", "Home")" readonly />
@@ -47,13 +47,11 @@
                                 </a>*@
                         </div>
                     </div>
-                    <div class="container-login100-form-btn">
+                    <div class="container-login100-form-btn align-items-center">
                         <button class="login100-form-btn" type="submit" data-bind="click: loginValidate">
                             @Html.Resource("Login")
                         </button>
-                    </div>
-                    <div class="container-login100-form-btn">
-                        <a onclick="return fnChangeCulture('@Request.Url.AbsoluteUri');">@Html.Resource("LoadCutureSite")</a>
+                        <a class="CultrChangeLogin" onclick="return fnChangeCulture('@Request.Url.AbsoluteUri');">@Html.Resource("LoadCutureSite")</a>
                     </div>
                 </form>
             </div>
