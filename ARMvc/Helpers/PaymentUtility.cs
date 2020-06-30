@@ -29,8 +29,8 @@ namespace AlKhalidRentalsClient.Helpers
                     {
                         Language = ConfigSettings.KnetLanguage,
                         AliasName = ConfigSettings.KnetAliasName,
-                        ResponseURL = ConfigSettings.KnetResponseURL,
-                        ErrorURL = ConfigSettings.KnetErrorURL,
+                        ResponseURL = string.Format(ConfigSettings.KnetResponseURL, payModel.Culture),
+                        ErrorURL = string.Format(ConfigSettings.KnetErrorURL),
                         ResourcePath = ConfigSettings.KnetResourcePath,
                         KnetCurrency = ConfigSettings.KnetCurrency
                     }

@@ -5,6 +5,7 @@ using ARMvc.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
@@ -24,6 +25,7 @@ namespace ARMvc.Controllers
         {
             UserModel objUser = Session[SessionConstants.UserSession] as UserModel;
             RQ.UDF1 = objUser.CardCode + "" + objUser.CardName;
+            RQ.Culture = Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName;
 
             PaymentResponseModel objResponse = await new PaymentUtility().InitiatePayment(RQ);
             if (objResponse is PaymentResponseModel && string.IsNullOrEmpty(objResponse.ErrorMessage))

@@ -13,5 +13,6 @@ namespace AlKhalidModels
         public string UDF3 { get; set; }
         public string UDF4 { get; set; }
         public string UDF5 { get; set; }
+        public string Culture { get; set; }
     }
 }
