@@ -3,7 +3,7 @@
 
 <h2>@Html.Resource("MaintenanceSummary")</h2>
 
-@if (Model.IsRequested)
+@if (Model != null && Model.IsRequested)
 {
     <div>@Html.Resource("MaintenanceSummarySuccess")@Model.RequestReffNo</div>
 }
