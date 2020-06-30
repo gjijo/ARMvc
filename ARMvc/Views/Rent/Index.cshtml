@@ -15,7 +15,7 @@
     <div class="InnerTittle">
         <div class="OverLayBg d-flex align-items-center">
             <div class="container d-flex align-items-center">
-                <h2>Pay Rent</h2>
+                <h2>@Html.Resource("PayRent")</h2>
             </div>
         </div>
     </div>
@@ -24,12 +24,12 @@
         <div class="container">
             <div class="TableBox">
                 <div class="row HeadRow">
-                    <div class="col-md-1">Entry No</div>
-                    <div class="col-md-2">Doc Number</div>
-                    <div class="col-md-1">Status</div>
-                    <div class="col-md-2">Doc Date</div>
-                    <div class="col-md-2">Due Date</div>
-                    <div class="col-md-2">Doc Total</div>
+                    <div class="col-md-1">@Html.Resource("EntryNo")</div>
+                    <div class="col-md-2">@Html.Resource("DocNumber")</div>
+                    <div class="col-md-1">@Html.Resource("Status")</div>
+                    <div class="col-md-2">@Html.Resource("DocDate")</div>
+                    <div class="col-md-2">@Html.Resource("DueDate")</div>
+                    <div class="col-md-2">@Html.Resource("DocTotal")</div>
                     <div class="col-md-2">&nbsp;</div>
                 </div>
                 <div class="row" data-bind="foreach: DueInvoice">
@@ -39,23 +39,23 @@
                     <div class="col-md-2" data-bind="text: strDocDate"></div>
                     <div class="col-md-2" data-bind="text: strDueDate"></div>
                     <div class="col-md-2" data-bind="text: DocTotal"></div>
-                    <div class="col-md-2"><span data-bind="click: $parent.addInvoice, text: IsSelected() ? 'Deselect' : 'Select', css: {'selected' : IsSelected}"></span></div>
+                    <div class="col-md-2"><span data-bind="click: $parent.addInvoice, text: IsSelected() ? '@Html.Resource("Deselect")' : '@Html.Resource("Select")', css: {'selected' : IsSelected}"></span></div>
                 </div>
             </div>
         </div>
         <div class="container AmountSec">
             <form id="frm_PayRent" action="@Url.Action("PayRent", "Rent")" method="post">
-                <h3>Payment Details</h3>
+                <h3>@Html.Resource("PaymentDetails")</h3>
                 <div class="d-flex align-items-center mb-4">
-                    <label>Rent</label>
+                    <label>@Html.Resource("Rent")</label>
                     <input type="text" id="inp_invTotal" value="KWD 0.000" readonly>
                 </div>
                 <div class="d-flex align-items-center mb-4">
-                    <label>Service Charge</label>
+                    <label>@Html.Resource("ServiceCharge")</label>
                     <input type="text" id="inp_servChrg" value="KWD 0.000" readonly>
                 </div>
                 <div class="d-flex align-items-center mb-4">
-                    <label>Total Amount</label>
+                    <label>@Html.Resource("TotalAmount")</label>
                     <input type="text" id="inv_payAmount" value="KWD 0.000" readonly>
                 </div>
                 <div class="d-flex align-items-center mb-4">
@@ -65,7 +65,7 @@
                     <input type="hidden" name="UDF5" value="" />
                     <input type="hidden" name="Amount" value="" />
                     <input type="hidden" name="ReffNo" value="" />
-                    <button data-bind="click: payInvoices">Proceed to Payment</button>
+                    <button data-bind="click: payInvoices">@Html.Resource("ProceedToPayment")</button>
                 </div>
             </form>
         </div>

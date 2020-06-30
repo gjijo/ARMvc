@@ -18,6 +18,7 @@ var AppViewModel = {
             }
         }
         if (UDF2.length > 0) {
+            fnShowLoader();
             $("#frm_PayRent input[name=UDF2]").val(UDF2.slice(0, -1));
             $("#frm_PayRent input[name=UDF3]").val(UDF3.slice(0, -1));
             $("#frm_PayRent input[name=UDF4]").val(UDF4.slice(0, -1));

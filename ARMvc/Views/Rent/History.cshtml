@@ -1,14 +1,15 @@
-﻿<div class="Hist_Transac">
+﻿@using ARMvc.Helpers; 
+<div class="Hist_Transac">
     <div class="container">
-        <h3>Payment History</h3>
+        <h3>@Html.Resource("PaymentHistory")</h3>
         <div class="TableBox">
             <div class="row HeadRow">
-                <div class="col-md-2">Entry No</div>
-                <div class="col-md-2">Doc Number</div>
-                <div class="col-md-2">Doc Date</div>
-                <div class="col-md-2">Due Date</div>
-                <div class="col-md-2">Doc Total</div>
-                <div class="col-md-2">Status</div>
+                <div class="col-md-2">@Html.Resource("EntryNo")</div>
+                <div class="col-md-2">@Html.Resource("DocNumber")</div>
+                <div class="col-md-2">@Html.Resource("DocDate")</div>
+                <div class="col-md-2">@Html.Resource("DueDate")</div>
+                <div class="col-md-2">@Html.Resource("DocTotal")</div>
+                <div class="col-md-2">@Html.Resource("Status")</div>
             </div>
             <div class="row" data-bind="foreach: HistoryInvoice">
                 <div class="col-md-2" data-bind="text: DocEntryNo"></div>
@@ -16,7 +17,7 @@
                 <div class="col-md-2" data-bind="text: strDocDate"></div>
                 <div class="col-md-2" data-bind="text: strDueDate"></div>
                 <div class="col-md-2" data-bind="text: DocTotal"></div>
-                <div class="col-md-2" data-bind="text: DocStatus == '1' ? 'unpaid' : 'paid'"></div>
+                <div class="col-md-2" data-bind="text: DocStatus == '1' ? '@Html.Resource("UnPaid")' : '@Html.Resource("Paid")'"></div>
             </div>
         </div>
     </div>

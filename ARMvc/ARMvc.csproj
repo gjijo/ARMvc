@@ -196,6 +196,7 @@
       <SubType>Designer</SubType>
     </None>
     <Content Include="Scripts\Account.js" />
+    <Content Include="Scripts\AllPage.js" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\core.min.js" />
     <Content Include="Scripts\Home.js" />
@@ -229,7 +230,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Controllers\" />
     <Folder Include="Areas\Admin\Views\Shared\" />
-    <Folder Include="Views\Payment\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

@@ -1,4 +1,5 @@
 ﻿@model AlKhalidModels.MaintenanceModel
+@using ARMvc.Helpers;
 
 <!-- Maintenance Page-->
 <!-- Title Section-->
@@ -6,7 +7,7 @@
     <div class="InnerTittle">
         <div class="OverLayBg d-flex align-items-center">
             <div class="container d-flex align-items-center">
-                <h2>Maintenance Request</h2>
+                <h2>@Html.Resource("MaintenanceRequest")</h2>
             </div>
         </div>
     </div>
@@ -14,21 +15,21 @@
     <div class="DeatailsSec">
         <form id="frm_PayRent" action="@Url.Action("RequestService", "Maintenance")" method="post">
             <div class="container MaintDetails">
-                <h3>Request Details</h3>
+                <h3>@Html.Resource("RequestDetails")</h3>
                 <div class="d-flex align-items-center mb-4">
-                    <label>Card Code</label>
+                    <label>@Html.Resource("CardCode")</label>
                     <input type="text" name="CardCode" value="@Model.CardCode" readonly>
                 </div>
                 <div class="d-flex align-items-center mb-4">
-                    <label>Card Name</label>
+                    <label>@Html.Resource("CardName")</label>
                     <input type="text" name="CardName" value="@Model.CardName" readonly>
                 </div>
                 <div class="d-flex align-items-center mb-4">
-                    <label>Message <span class="Required">*</span></label>
+                    <label>@Html.Resource("Message")<span class="Required">*</span></label>
                     <textarea placeholder="Enter Message" name="Subject"></textarea>
                 </div>
                 <div class="d-flex align-items-center mb-4">
-                    <button>Submit Request</button>
+                    <button onclick="fnShowLoader();">@Html.Resource("SubmitRequest")</button>
                 </div>
             </div>
         </form>

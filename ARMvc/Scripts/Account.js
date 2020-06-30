@@ -5,6 +5,7 @@
     self.HomeURL = "";
 
     self.loginSubmit = function () {
+        fnShowLoader();
         $.ajax({
             url: $("#LoginURL").val(),
             type: "POST",
@@ -16,7 +17,7 @@
                     location.href = document.getElementById('HomeURL').value;
                 }
                 else {
-
+                    fnHideLoader();
                 }
             }
         });

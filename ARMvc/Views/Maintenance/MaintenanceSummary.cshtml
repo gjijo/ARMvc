@@ -1,16 +1,13 @@
 ﻿@model AlKhalidModels.MaintenanceModel
-@{
-    ViewBag.Title = "MaintenanceSummary";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
+@using ARMvc.Helpers;
 
-<h2>Maintenance Summary</h2>
+<h2>@Html.Resource("MaintenanceSummary")</h2>
 
 @if (Model.IsRequested)
 {
-    <div>Your request has been recieved. Please note down the refference number - @Model.RequestReffNo</div>
+    <div>@Html.Resource("MaintenanceSummarySuccess")@Model.RequestReffNo</div>
 }
 else
 {
-    <div>Sorry, we could't place your request at the moment. Please try again later.</div>
+    <div>@Html.Resource("MaintenanceSummaryFail")</div>
 }
