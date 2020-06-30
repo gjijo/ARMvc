@@ -1,4 +1,5 @@
-﻿using AlKhalidModels;
+﻿using AlKhalidConnector;
+using AlKhalidModels;
 using AlKhalidRentalsClient.Helpers;
 using ARMvc.Models;
 using System;
@@ -21,27 +22,36 @@ namespace ARMvc.Controllers
         [HttpPost]
         public async Task<ActionResult> PayRent(PaymentRequestModel RQ)
         {
+            UserModel objUser = Session[SessionConstants.UserSession] as UserModel;
+            RQ.UDF1 = objUser.CardCode + "" + objUser.CardName;
+
             PaymentResponseModel objResponse = await new PaymentUtility().InitiatePayment(RQ);
             if (objResponse is PaymentResponseModel && string.IsNullOrEmpty(objResponse.ErrorMessage))
             {
                 Response.Redirect(objResponse.RedirectionURL);
             }
-            return Json(new ResponseModel() { Status = false, Data = objResponse, Errors = new List<string> { "Payment Error" } });
-        }
-
-        public ActionResult PayReciept(PaymentResponseModel RQ)
-        {
-            return View(RQ);
+            return Json(new ResponseModel() { Status = false, Data = objResponse, Errors = new List<string> { "Payment Error" } }, JsonRequestBehavior.AllowGet);
         }
 
         public ActionResult History()
         {
             return View();
         }
+
         [HttpGet]
-        public async Task<ActionResult> RetrieveHistoricData()
+        public async Task<ActionResult> RetrieveDueInvoices()
         {
-            return Json(new ResponseModel() { Status = false, Data = null, Errors = null });
+            UserModel objUser = Session[SessionConstants.UserSession] as UserModel;
+            RentHistory objInvoices = await Connector.GetRentDues(objUser) as RentHistory;
+            return Json(new ResponseModel() { Status = false, Data = objInvoices.Result.InvoicesData, Errors = null }, JsonRequestBehavior.AllowGet);
+        }
+
+        [HttpGet]
+        public async Task<ActionResult> RetrieveHistoricInvoices()
+        {
+            UserModel objUser = Session[SessionConstants.UserSession] as UserModel;
+            RentHistory objInvoices = await Connector.GetRentHistory(objUser) as RentHistory;
+            return Json(new ResponseModel() { Status = false, Data = objInvoices.Result.InvoicesData, Errors = null }, JsonRequestBehavior.AllowGet);
         }
     }
 }

@@ -22,15 +22,15 @@ namespace ARMvc.Controllers
         public async Task<ActionResult> SignIn(UserModel userDetails)
         {
             UserModel objUser = await Connector.Authenticate(userDetails) as UserModel;
-            Session[SessionConstants.UserSession]= objUser;
+            Session[SessionConstants.UserSession] = objUser;
             return Json(new ResponseModel() { Status = true, Data = objUser, Errors = null });
         }
 
-        [HttpPost]
+        [HttpGet]
         public async Task<ActionResult> SignOut()
         {
             HttpContext.Session.Remove(SessionConstants.UserSession);
-            return await Task.FromResult(Json(new ResponseModel() { Status = true, Data = true, Errors = null }));
+            return RedirectToAction("Index");
         }
     }
 }

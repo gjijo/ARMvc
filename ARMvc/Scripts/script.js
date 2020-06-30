@@ -1849,3 +1849,4 @@ if (/iPhone|iPad/i.test(navigator.userAgent)) {
 		$(this).trigger('click');
 	});
 }
+

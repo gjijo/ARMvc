@@ -6,7 +6,7 @@
 
     self.loginSubmit = function () {
         $.ajax({
-            url: "/Account/SignIn",
+            url: $("#LoginURL").val(),
             type: "POST",
             data: ko.toJSON(self),
             contentType: "application/json; charset=utf-8",

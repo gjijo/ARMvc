@@ -1,0 +1,12 @@
+﻿{
+  "en": {
+    "Language": "الإنجليزية",
+    "PayRent": "Pay rent",
+    "MaintenanceRequest": "Maintenance request"
+  },
+  "ar": {
+    "Language": "English",
+    "PayRent": "ادفع الايجار",
+    "MaintenanceRequest": "طلب صيانة"
+  }
+}

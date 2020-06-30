@@ -5,11 +5,20 @@ namespace AlkhalidUtility
 {
     public class ConfigSettings
     {
-        public static System.Collections.Specialized.NameValueCollection AppSettings
+        private static System.Collections.Specialized.NameValueCollection AppSettings
         {
             get
             {
                 return ConfigurationManager.AppSettings;
+            }
+        }
+
+        #region MainSiteConfigs
+        public static string RootPath
+        {
+            get
+            {
+                return AppSettings["RootPath"] == null ? string.Empty : AppSettings["RootPath"];
             }
         }
         public static string LogsPath
@@ -18,8 +27,17 @@ namespace AlkhalidUtility
             {
                 return AppSettings["LogsPath"] == null ? string.Empty : AppSettings["LogsPath"];
             }
-
         }
+        public static string SapAPIUrl
+        {
+            get
+            {
+                return AppSettings["SapAPIUrl"] == null ? string.Empty : AppSettings["SapAPIUrl"];
+            }
+        }
+        #endregion MainSiteConfigs
+
+        #region KnetConfigs
         public static string KnetLanguage
         {
             get
@@ -68,5 +86,6 @@ namespace AlkhalidUtility
             }
 
         }
+        #endregion KnetConfigs
     }
 }

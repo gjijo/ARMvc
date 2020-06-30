@@ -44,6 +44,7 @@
     <Compile Include="AnnouncementModel.cs" />
     <Compile Include="ConnectorResponseModel.cs" />
     <Compile Include="MaintenanceStatusModel.cs" />
+    <Compile Include="PaymentHistoryModel.cs" />
     <Compile Include="PaymentRequestModel.cs" />
     <Compile Include="PaymentResponseModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -128,6 +128,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Connected Services\KnetService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -141,10 +142,14 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\CultureAttribute.cs" />
+    <Compile Include="Helpers\LCultureHelper.cs" />
     <Compile Include="Helpers\ObjectAutoMap.cs" />
     <Compile Include="Helpers\PaymentUtility.cs" />
+    <Compile Include="Helpers\ResourceHelper.cs" />
     <Compile Include="Helpers\SessionConstants.cs" />
     <Compile Include="Helpers\SessionFilter.cs" />
+    <Compile Include="Helpers\SessionHelper.cs" />
     <Compile Include="Models\ErrorViewModel.cs" />
     <Compile Include="Models\ResponseModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -153,6 +158,7 @@
     <Content Include="Connected Services\KnetService\ARMvc.KnetService.ResponseModel.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Areas\Admin\Views\web.config" />
     <None Include="Connected Services\KnetService\KNETService.disco" />
     <None Include="Connected Services\KnetService\configuration91.svcinfo" />
     <None Include="Connected Services\KnetService\configuration.svcinfo" />
@@ -189,9 +195,11 @@
     <Content Include="Scripts\Account.js" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\core.min.js" />
+    <Content Include="Scripts\Home.js" />
     <Content Include="Scripts\jquery.min.js" />
     <Content Include="Scripts\knockout\knockout-3.5.1.js" />
     <Content Include="Scripts\popper.min.js" />
+    <Content Include="Scripts\Rent.js" />
     <Content Include="Scripts\script.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -215,6 +223,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Admin\Controllers\" />
+    <Folder Include="Areas\Admin\Views\Shared\" />
     <Folder Include="Views\Payment\" />
   </ItemGroup>
   <ItemGroup>
@@ -222,6 +232,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="CultureFile\CultureData.json" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
