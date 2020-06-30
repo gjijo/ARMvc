@@ -175,12 +175,14 @@
     <Content Include="Content\css\util.css" />
     <Content Include="Content\images\al_khalid-logo.png" />
     <Content Include="Content\images\bg-01.jpg" />
+    <Content Include="Content\images\favicon.png" />
     <Content Include="Content\images\slider-slide-1 - Copy.jpg" />
     <Content Include="Content\images\slider-slide-1.jpg" />
     <Content Include="Content\images\slider-slide-2 - Copy.jpg" />
     <Content Include="Content\images\slider-slide-2.jpg" />
     <Content Include="Content\images\slider-slide-3 - Copy.jpg" />
     <Content Include="Content\images\slider-slide-3.jpg" />
+    <Content Include="Content\images\success_cross.svg" />
     <Content Include="Content\images\success_tick.svg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />

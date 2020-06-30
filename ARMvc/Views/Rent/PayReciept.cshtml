@@ -7,18 +7,18 @@
     <div class="container-login100 ">
         <div class="wrap-login100">
             <div class="paymentSuccess d-flex justify-content-center">
-                <img src="@Url.Action("~/Content/images/" + (isPGSuccess ? "success_tick.svg" : "success_cross.svg"))">
+                <img src="@Url.Content("~/Content/images/" + (isPGSuccess ? "success_tick.svg" : "success_cross.svg"))">
             </div>
             <div class="Messge d-flex justify-content-center">
                 <h4>@(isPGSuccess ? "Payment Success" : "Payment Failed")</h4>
-                <p>Result : @Model.Result</p>
-                <p>PayReference : @Model.PayReference</p>
-                <p>PaymentId : @Model.PaymentId</p>
-                <p>TransID : @Model.TransID</p>
-                <p>Auth : @Model.Auth</p>
-                <p>Reference : @Model.Reference</p>
+                <p><span>Result :</span> <span>@Model.Result</span></p>
+                <p><span>PayReference :</span> <span>@Model.PayReference</span></p>
+                <p><span>PaymentId :</span> <span>@Model.PaymentId</span></p>
+                <p><span>TransID :</span> <span>@Model.TransID</span></p>
+                <p><span>Auth :</span> <span>@Model.Auth</span></p>
+                <p><span>Reference :</span> <span>@Model.Reference</span></p>
                 <p>
-                    <a href="@Url.Action("Index", "Home")" class="Back_Btn">Back to Home</a>
+                    <a href="@Url.Action("Index", "Home")" class="Back_Btn">@Html.Resource("BackToHome")</a>
                 </p>
             </div>
         </div>

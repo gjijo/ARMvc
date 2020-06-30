@@ -1,13 +1,25 @@
 ﻿@model AlKhalidModels.MaintenanceModel
 @using ARMvc.Helpers;
 
-<h2>@Html.Resource("MaintenanceSummary")</h2>
-
-@if (Model.IsRequested)
-{
-    <div>@Html.Resource("MaintenanceSummarySuccess")@Model.RequestReffNo</div>
-}
-else
-{
-    <div>@Html.Resource("MaintenanceSummaryFail")</div>
-}
+<div class="limiter">
+    <div class="container-login100 ">
+        <div class="wrap-login100">
+            <div class="paymentSuccess d-flex justify-content-center">
+                <img src="@Url.Content("~/Content/images/" + (Model.IsRequested ? "success_tick.svg" : "success_cross.svg"))">
+            </div>
+            <div class="Messge d-flex justify-content-center">
+                @if (Model.IsRequested)
+                {
+                    <h4>@Html.Resource("MaintenanceSummarySuccess")@Model.RequestReffNo</h4>
+                }
+                else
+                {
+                    <h4>@Html.Resource("MaintenanceSummaryFail")</h4>
+                }
+                <p>
+                    <a href="@Url.Action("Index", "Home")" class="Back_Btn">@Html.Resource("BackToHome")</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
