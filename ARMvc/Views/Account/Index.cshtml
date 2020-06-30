@@ -9,6 +9,9 @@
 <head>
     <!-- Site Title-->
     <title>@Html.Resource("AlKhalid")</title>
+    <!-- Fav Icon-->
+    <link rel="icon" href="~/Content/images/favicon.png" type="image/x-icon">
+    <!-- Stylesheets-->
     <link rel="stylesheet" type="text/css" href="~/Content/css/bootstrap.min.css">
     @*<link rel="stylesheet" type="text/css" href="~/Content/css/util.css">*@
     <link rel="stylesheet" type="text/css" href="~/Content/css/main_@(culture).css">
@@ -64,5 +67,25 @@
     <script src="~/Scripts/jquery.min.js"></script>
     <script src="~/Scripts/Account.js"></script>
     <input type="hidden" id="hdf_Culture_URL" value="@Url.Action("ChangeCulture", "Account")" />
+    <!-- Popup overlay loader start here-->
+    <div class="overlay">
+        <div class="loaderDiv">
+            <div class="sk-fading-circle">
+                <div class="sk-circle1 sk-circle"></div>
+                <div class="sk-circle2 sk-circle"></div>
+                <div class="sk-circle3 sk-circle"></div>
+                <div class="sk-circle4 sk-circle"></div>
+                <div class="sk-circle5 sk-circle"></div>
+                <div class="sk-circle6 sk-circle"></div>
+                <div class="sk-circle7 sk-circle"></div>
+                <div class="sk-circle8 sk-circle"></div>
+                <div class="sk-circle9 sk-circle"></div>
+                <div class="sk-circle10 sk-circle"></div>
+                <div class="sk-circle11 sk-circle"></div>
+                <div class="sk-circle12 sk-circle"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Popup overlay loader ends here-->
 </body>
 </html>
