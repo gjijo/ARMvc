@@ -39,7 +39,7 @@
                     <div class="col-md-2" data-bind="text: strDocDate"></div>
                     <div class="col-md-2" data-bind="text: strDueDate"></div>
                     <div class="col-md-2" data-bind="text: DocTotal"></div>
-                    <div class="col-md-2"><span data-bind="click: $parent.addInvoice, text: IsSelected == true ? 'Deselect' : 'Select', css: IsSelected == true ? 'selected' : ''"></span></div>
+                    <div class="col-md-2"><span data-bind="click: $parent.addInvoice, text: IsSelected() ? 'Deselect' : 'Select', css: {'selected' : IsSelected}"></span></div>
                 </div>
             </div>
         </div>
