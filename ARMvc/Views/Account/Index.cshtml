@@ -1,15 +1,17 @@
 ﻿@using ARMvc.Helpers;
+@using System.Threading;
 @{
     Layout = null;
+    string culture = Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName == "en" ? "ar" : "en";
 }
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <!-- Site Title-->
     <title>@Html.Resource("AlKhalid")</title>
-    <link rel="stylesheet" type="text/css" href="~/Content/css/bootstrap_ar.min.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/css/bootstrap.min.css">
     @*<link rel="stylesheet" type="text/css" href="~/Content/css/util.css">*@
-    <link rel="stylesheet" type="text/css" href="~/Content/css/main_ar.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/css/main_@(culture).css">
 </head>
 <body>
     <input type="hidden" id="HomeURL" value="@Url.Action("Index", "Home")" readonly />
