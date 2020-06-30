@@ -3,11 +3,11 @@
 <footer class="section footer-classic context-dark">
     <div class="container">
         <ul>
-            <li class="active"><a href="#">@Html.Resource("Home")</a></li>
+            @*<li class="active"><a href="#">@Html.Resource("Home")</a></li>*@
             <li><a href="@Url.Action("Index", "Maintenance")">@Html.Resource("MaintenanceRequest")</a></li>
             <li><a href="@Url.Action("Index", "Rent")">@Html.Resource("PayRent")</a></li>
-            <li><a href="#" onclick="return fnChangeCulture();">@Html.Resource("Language")</a></li>
-            <li><a href="#">@Html.Resource("Logout")</a></li>
+            @*<li><a href="#" onclick="return fnChangeCulture();">@Html.Resource("Language")</a></li>
+            <li><a href="#">@Html.Resource("Logout")</a></li>*@
         </ul>
         <ul>
             <li>
@@ -16,9 +16,9 @@
                     <span>©&nbsp;</span>
                     <span>2020</span>
                     <span>&nbsp;</span>
-                    <span>Al-Khalid</span>
+                    <span>@Html.Resource("AlKhalid")</span>
                     <span>&nbsp;</span>
-                    <a href="#">Privacy Policy</a>
+                    @*<a href="#">Privacy Policy</a>*@
                     <span>&nbsp;</span>
                     <a href="mailto:info@alkhalid.com">info@alkhalid.com</a>
                 </p>

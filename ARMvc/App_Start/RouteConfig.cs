@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
+using System.Threading;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
@@ -13,15 +15,18 @@ namespace ARMvc
         {
             get
             {
-                if (System.Threading.Thread.CurrentThread.CurrentCulture.Name.Contains("ar"))
+                if (System.Threading.Thread.CurrentThread.CurrentCulture.Name.Contains("en"))
                 {
-                    return "ar";
+                    return "en";
                 }
-                return "en";
+                return "ar";
             }
         }
         public static void RegisterRoutes(RouteCollection routes)
         {
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo("ar-SA");
+            Thread.CurrentThread.CurrentCulture = new CultureInfo("ar-SA");
+
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(

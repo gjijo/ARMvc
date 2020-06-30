@@ -86,6 +86,16 @@ namespace AlkhalidUtility
             }
 
         }
+        public static double KnetServiceCharge
+        {
+            get
+            {
+                double _KnetServiceCharge = 0;
+                double.TryParse(AppSettings["KnetServiceCharge"], out _KnetServiceCharge);
+                return _KnetServiceCharge;
+            }
+
+        }
         #endregion KnetConfigs
     }
 }

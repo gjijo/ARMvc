@@ -2,11 +2,43 @@
   "en": {
     "Language": "الإنجليزية",
     "PayRent": "Pay rent",
-    "MaintenanceRequest": "Maintenance request"
+    "MaintenanceRequest": "Maintenance request",
+    "AlKhalid": "Al-Khalid",
+    "Username": "Username",
+    "Password": "Password",
+    "EnterUsername": "Enter username",
+    "EnterPassword": "Enter password",
+    "Login": "Login",
+    "Logout": "Logout",
+    "Home": "Home",
+    "AlKhalidLogin": "Sign-in to Al-Khalid",
+    "AlKhalidGroup": "AL-KHALID Group",
+    "IntroHead1": "Your trusted partner",
+    "IntroHead2": "Pay Online",
+    "IntroHead3": "Now, pay your bills, request for service, and track your history online.",
+    "LoadCutureSite": "تحميل موقع اللغة الإنجليزية",
+    "IntroTxt1": "Now you can you June/July rent. All your fines will be weived off..............",
+    "IntroTxt2": "Due to COVID, all the renovation acticies will be carried out only after July.."
   },
   "ar": {
     "Language": "English",
     "PayRent": "ادفع الايجار",
-    "MaintenanceRequest": "طلب صيانة"
+    "MaintenanceRequest": "طلب صيانة",
+    "AlKhalid": "الخالد",
+    "Username": "اسم المستخدم",
+    "Password": "كلمه السر",
+    "EnterUsername": "ادخل اسم المستخدم",
+    "EnterPassword": "أدخل كلمة المرور",
+    "Login": "تسجيل الدخول",
+    "Logout": "تسجيل خروج",
+    "Home": "الصفحة الرئيسية",
+    "AlKhalidLogin": "تسجيل الدخول إلى الخالد",
+    "AlKhalidGroup": "مجموعة الخالد",
+    "IntroHead1": "شريكك الموثوق",
+    "IntroHead2": "ادفع عبر الإنترنت",
+    "IntroHead3": "الآن ، ادفع فواتيرك ، وطلب الخدمة ، وتتبع سجلك عبر الإنترنت.",
+    "LoadCutureSite": "Load english site",
+    "IntroTxt1": "يمكنك الآن الإيجار يونيو / يوليو. سيتم التغاضي عن جميع الغرامات الخاصة بك ..............",
+    "IntroTxt2": "بسبب COVID ، سيتم تنفيذ جميع إجراءات التجديد فقط بعد يوليو .."
   }
 }

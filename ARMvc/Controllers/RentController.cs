@@ -30,7 +30,7 @@ namespace ARMvc.Controllers
             {
                 Response.Redirect(objResponse.RedirectionURL);
             }
-            return Json(new ResponseModel() { Status = false, Data = objResponse, Errors = new List<string> { "Payment Error" } }, JsonRequestBehavior.AllowGet);
+            return View(@"~\Views\Rent\PayReciept.cshtml", objResponse);
         }
 
         public ActionResult History()

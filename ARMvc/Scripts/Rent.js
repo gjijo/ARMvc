@@ -20,10 +20,19 @@ var AppViewModel = {
         $("#frm_PayRent input[name=UDF5]").val(UDF5.slice(0, -1));
         $("#frm_PayRent").submit();
         return false;
+    },
+    calcServiceCharge: function (payAmount) {
+        var Finaltotal = parseFloat(payAmount) + $('#hdf_knet_serviceCharge').val();
+        $('#inp_invTotal').val('KWD ' + payAmount);
+        $('#inp_servChrg').val('KWD ' + $('#hdf_knet_serviceCharge').val());
+        $('#inv_payAmount').val('KWD ' + Finaltotal);
     }
 };
 ko.applyBindings(AppViewModel);
 
 $.get($("#hdf_rent_duelist").val(), function (rsp) {
     AppViewModel.DueInvoice(rsp.Data);
+});
+$.get($("#hdf_rent_duelist").val(), function (rsp) {
+    AppViewModel.HistoryInvoice(rsp.Data);
 });

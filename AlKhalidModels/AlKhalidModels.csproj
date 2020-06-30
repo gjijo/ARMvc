@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="AnnouncementModel.cs" />
     <Compile Include="ConnectorResponseModel.cs" />
+    <Compile Include="MaintenanceModel.cs" />
     <Compile Include="MaintenanceStatusModel.cs" />
     <Compile Include="PaymentHistoryModel.cs" />
     <Compile Include="PaymentRequestModel.cs" />

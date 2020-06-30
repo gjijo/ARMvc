@@ -1,53 +1,43 @@
-﻿
-        <!-- Slider-->
-        <section class="section">
-            <div class="Banner-slider">
-                <div class="contentSection">
+﻿@using ARMvc.Helpers;
+<!-- Slider-->
+<section class="section">
+    <div class="Banner-slider">
+        <div class="contentSection">
 
-                    <div class="d-flex flex-wrap">
-                        <h6>Your trusted partner</h6>
-                        <h1>AL-KHALID Group</h1>
-                        <h3 class="">Pay Online</h3>
-                        <p>Now, pay your bills, request for service, and track your history online.</p>
-                        <div class="CtaBtn">
-                            <a class="" href="@Url.Action("Index", "Maintenance")" tabindex="0">Maintenance Request</a>
-                            <a class="" href="@Url.Action("Index", "Rent")" tabindex="0">Pay Rent</a>
-                        </div>
-                        <div class="NewsFeed">
-                            <div id="carouselNewsIndicators" class="carousel slide" data-ride="carousel">
-                                <div class="carousel-inner" role="listbox">
-                                    <div class="carousel-item active">
-                                        <p>Now you can you June/July rent. All your fines will be weived off..............</p>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <p>Due to COVID, all the renovation acticies will be carried out ounly after July.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- <svg class="carousel-parent-shape" width="1216px" height="625px" viewBox="0 0 1216 625" preserveAspectRatio="none">
-                       <path fill-rule="evenodd" d="M-0.000,311.382 C-0.000,311.382 62.999,372.037 102.727,273.078 C118.498,233.793 168.280,306.657 186.342,249.138 C203.245,195.310 231.848,195.447 246.067,143.801 C266.856,68.285 291.661,3.867 310.569,0.159 C341.089,-5.826 374.891,182.287 422.852,134.224 C468.160,88.821 511.245,170.842 535.135,177.317 C545.468,180.117 579.312,194.321 613.972,189.287 C635.941,186.097 655.397,155.251 678.475,172.529 C726.537,208.512 730.880,342.989 781.202,397.567 C807.168,425.730 831.757,373.189 862.428,356.869 C890.078,342.156 923.937,365.255 946.043,356.869 C975.409,345.727 998.875,341.716 1015.324,294.624 C1027.442,259.931 1032.880,184.101 1048.770,155.771 C1068.789,120.077 1110.838,156.070 1129.996,129.436 C1169.461,74.571 1216.000,43.251 1216.000,43.251 L1216.000,624.999 L-0.000,624.999 L-0.000,311.382 Z"></path>
-                    </svg>  -->
+            <div class="d-flex flex-wrap">
+                <h6>@Html.Resource("IntroHead1")</h6>
+                <h1>@Html.Resource("AlKhalidGroup")</h1>
+                <h3 class="">@Html.Resource("IntroHead2")</h3>
+                <p>@Html.Resource("IntroHead3")</p>
+                <div class="CtaBtn">
+                    <a class="" href="@Url.Action("Index", "Maintenance")" tabindex="0">@Html.Resource("MaintenanceRequest")</a>
+                    <a class="" href="@Url.Action("Index", "Rent")" tabindex="0">@Html.Resource("PayRent")</a>
                 </div>
-                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner" role="listbox">
-                        <!-- Slide One - Set the background image for this slide in the line below -->
-                        <div class="carousel-item active" style="background-image: url('https://assets-news.housing.com/news/wp-content/uploads/2018/11/23065442/Stamp-duty-and-tax-on-gift-of-property-FB-1200x725-compressed-1200x725.jpg') ">
-
-                        </div>
-                        <!-- Slide Two - Set the background image for this slide in the line below -->
-                        <div class="carousel-item" style="background-image: url('https://assets-news.housing.com/news/wp-content/uploads/2018/11/23065442/Stamp-duty-and-tax-on-gift-of-property-FB-1200x725-compressed-1200x725.jpg') ">
-
-                        </div>
-                        <!-- Slide Three - Set the background image for this slide in the line below -->
-                        <div class="carousel-item" style="background-image: url('https://assets-news.housing.com/news/wp-content/uploads/2018/11/23065442/Stamp-duty-and-tax-on-gift-of-property-FB-1200x725-compressed-1200x725.jpg') ">
-
+                <div class="NewsFeed">
+                    <div id="carouselNewsIndicators" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner" role="listbox">
+                            <div class="carousel-item active">
+                                <p>@Html.Resource("IntroTxt1")</p>
+                            </div>
+                            <div class="carousel-item">
+                                <p>@Html.Resource("IntroTxt2")</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-<input type="hidden" id="hdf_Culture_URL" value="@Url.Action("ChangeCulture", "Home")" />
-        
+        </div>
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active" style="background-image: url('https://assets-news.housing.com/news/wp-content/uploads/2018/11/23065442/Stamp-duty-and-tax-on-gift-of-property-FB-1200x725-compressed-1200x725.jpg') ">
+                </div>
+                <div class="carousel-item" style="background-image: url('https://assets-news.housing.com/news/wp-content/uploads/2018/11/23065442/Stamp-duty-and-tax-on-gift-of-property-FB-1200x725-compressed-1200x725.jpg') ">
+                </div>
+                <div class="carousel-item" style="background-image: url('https://assets-news.housing.com/news/wp-content/uploads/2018/11/23065442/Stamp-duty-and-tax-on-gift-of-property-FB-1200x725-compressed-1200x725.jpg') ">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 

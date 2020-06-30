@@ -1,5 +1,9 @@
-﻿<input type="hidden" id="hdf_rent_duelist" value="@Url.Action("RetrieveDueInvoices", "Rent")" />
+﻿@using AlkhalidUtility;
+@using ARMvc.Helpers; 
+
+<input type="hidden" id="hdf_rent_duelist" value="@Url.Action("RetrieveDueInvoices", "Rent")" />
 <input type="hidden" id="hdf_rent_historylist" value="@Url.Action("RetrieveHistoricInvoices", "Rent")" />
+<input type="hidden" id="hdf_knet_serviceCharge" value="@ConfigSettings.KnetServiceCharge" />
 
 @section Scripts {
     <script src="~/Scripts/Rent.js"></script>
@@ -44,21 +48,23 @@
                 <h3>Payment Details</h3>
                 <div class="d-flex align-items-center mb-4">
                     <label>Rent</label>
-                    <input type="text" name="" value="KWD 245.00" readonly>
+                    <input type="text" id="inp_invTotal" value="KWD 0.000" readonly>
                 </div>
                 <div class="d-flex align-items-center mb-4">
                     <label>Service Charge</label>
-                    <input type="text" name="" value="KWD 40.254" readonly>
+                    <input type="text" id="inp_servChrg" value="KWD 0.000" readonly>
                 </div>
                 <div class="d-flex align-items-center mb-4">
                     <label>Total Amount</label>
-                    <input type="text" name="" value="KWD 285.254" readonly>
+                    <input type="text" id="inv_payAmount" value="KWD 0.000" readonly>
                 </div>
                 <div class="d-flex align-items-center mb-4">
                     <input type="hidden" name="UDF2" value="" />
                     <input type="hidden" name="UDF3" value="" />
                     <input type="hidden" name="UDF4" value="" />
                     <input type="hidden" name="UDF5" value="" />
+                    <input type="hidden" name="Amount" value="" />
+                    <input type="hidden" name="ReffNo" value="" />
                     <button data-bind="click: payInvoices">Proceed to Payment</button>
                 </div>
             </form>

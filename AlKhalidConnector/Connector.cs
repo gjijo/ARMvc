@@ -60,9 +60,10 @@ namespace AlKhalidConnector
         {
             return await Task.FromResult(new ConnectorResponseModel());
         }
-        public static async Task<ConnectorResponseModel> RequestMaintenance(UserModel user)
+        public static async Task<Dictionary<string, string>> RequestMaintenance(ServiceCallDataResponseResult RQ)
         {
-            return await Task.FromResult(new ConnectorResponseModel());
+            Dictionary<string, string> objRentRsp = HttpClientRQHandler.SendRQ<Dictionary<string, string>, ServiceCallDataResponseResult>(RQ, "/ServiceCall");
+            return await Task.FromResult(objRentRsp);
         }
 
         public static async Task<ConnectorResponseModel> GetAnnouncements(UserModel user)

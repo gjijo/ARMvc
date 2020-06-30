@@ -21,28 +21,35 @@ namespace AlKhalidConnector
         internal static T SendRQ<T, U>(U objPostParams, string endPoint)
         {
             T rsponseData = default(T);
-            HttpClientHandler cHandler = new HttpClientHandler()
+            try
             {
-                AutomaticDecompression = DecompressionMethods.GZip,
-                AllowAutoRedirect = false,
-                UseDefaultCredentials = false,
-                UseCookies = false
-            };
-            HttpClient _httlClnt = new HttpClient(cHandler);
-
-            string postParams = SerializeToJSON<U>(objPostParams);
-
-            HttpRequestMessage httpRequestMsg = new HttpRequestMessage(HttpMethod.Post, BaseURL + endPoint);
-            httpRequestMsg.Content = new StringContent(postParams, Encoding.UTF8, "application/json");
-            httpRequestMsg.Headers.Add("Accept", "application/json");
-
-            using (HttpResponseMessage response = _httlClnt.SendAsync(httpRequestMsg, HttpCompletionOption.ResponseHeadersRead).Result)
-            {
-                using (HttpContent content = response.Content)
+                HttpClientHandler cHandler = new HttpClientHandler()
                 {
-                    string responseLog = content.ReadAsStringAsync().Result;
-                    rsponseData = DeSerializeJSON<T>(responseLog);
+                    AutomaticDecompression = DecompressionMethods.GZip,
+                    AllowAutoRedirect = false,
+                    UseDefaultCredentials = false,
+                    UseCookies = false
+                };
+                HttpClient _httlClnt = new HttpClient(cHandler);
+
+                string postParams = SerializeToJSON<U>(objPostParams);
+
+                HttpRequestMessage httpRequestMsg = new HttpRequestMessage(HttpMethod.Post, BaseURL + endPoint);
+                httpRequestMsg.Content = new StringContent(postParams, Encoding.UTF8, "application/json");
+                httpRequestMsg.Headers.Add("Accept", "application/json");
+
+                using (HttpResponseMessage response = _httlClnt.SendAsync(httpRequestMsg, HttpCompletionOption.ResponseHeadersRead).Result)
+                {
+                    using (HttpContent content = response.Content)
+                    {
+                        string responseLog = content.ReadAsStringAsync().Result;
+                        rsponseData = DeSerializeJSON<T>(responseLog);
+                    }
                 }
+            }
+            catch(Exception ex)
+            {
+
             }
             return rsponseData;
         }

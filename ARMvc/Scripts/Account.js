@@ -15,6 +15,9 @@
                 if (result.Status && result.Data) {
                     location.href = document.getElementById('HomeURL').value;
                 }
+                else {
+
+                }
             }
         });
     };
@@ -28,3 +31,10 @@
 
 var providerForUpdate = new LoginProvider();
 ko.applyBindings(providerForUpdate);
+
+function fnChangeCulture(absURL) {
+    $.get($("#hdf_Culture_URL").val() + "?url=" + absURL, function (URLdata) {
+        window.location.href = URLdata;
+    });
+    return false;
+}

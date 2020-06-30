@@ -6,7 +6,7 @@
             <div class="col-md-4">
                 <div class="logo" onclick="window.location.href=@Url.Action("Index", "Home")">
                     <img src="~/Content/images/al_khalid-logo.png">
-                    <span>Al-Khalid</span>
+                    <span>@Html.Resource("AlKhalid")</span>
                 </div>
             </div>
             <div class="col-md-8">
@@ -22,3 +22,4 @@
     </div>
 </header>
 <script src="~/Scripts/Home.js"></script>
+<input type="hidden" id="hdf_Culture_URL" value="@Url.Action("ChangeCulture", "Account")" />

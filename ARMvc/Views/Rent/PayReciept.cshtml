@@ -1,14 +1,23 @@
-﻿<div class="limiter">
+﻿@model AlKhalidModels.PaymentResponseModel
+    @{ 
+        bool isPGSuccess = !string.IsNullOrEmpty(Model.Result) && Model.Result.Equals("CAPTURED");
+    }
+<div class="limiter">
     <div class="container-login100 ">
         <div class="wrap-login100">
             <div class="paymentSuccess d-flex justify-content-center">
-                <img src="https://localhost:44393/Content/images/success_tick.svg">
+                <img src="~/Content/images/@(isPGSuccess ? "success_tick.svg" : "success_cross.svg")">
             </div>
             <div class="Messge d-flex justify-content-center">
-                <h4>Paymen Success</h4>
-                <p>Lorem Ipsum doler ametting the secure payment.</p>
+                <h4>@(isPGSuccess ? "Payment Success" : "Payment Failed")</h4>
+                <p>Result : @Model.Result</p>
+                <p>PayReference : @Model.PayReference</p>
+                <p>PaymentId : @Model.PaymentId</p>
+                <p>TransID : @Model.TransID</p>
+                <p>Auth : @Model.Auth</p>
+                <p>Reference : @Model.Reference</p>
                 <p>
-                    <a href="#" class="Back_Btn">Back to Home</a>
+                    <a href="@Url.Action("Index", "Home")" class="Back_Btn">Back to Home</a>
                 </p>
             </div>
         </div>
