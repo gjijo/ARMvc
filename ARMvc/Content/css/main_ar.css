@@ -271,6 +271,12 @@ input.input100 {
 .login100-form-btn:hover {
   background-color: #333333;
 }
+span.error{
+    width:100%;
+    color:red;
+    font-size:14px;
+    text-align:center;
+}
 @media (max-width: 576px) {
   .login100-form {
     padding: 43px 20px 57px 15px;
