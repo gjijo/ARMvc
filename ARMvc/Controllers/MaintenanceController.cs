@@ -42,18 +42,14 @@ namespace ARMvc.Controllers
                 Subject = RQ.Subject
             });
 
-            Dictionary<string, string> objResponse = await Connector.RequestMaintenance(oServiceCall) as Dictionary<string, string>;
+            ServiceReponse objResponse = await Connector.RequestMaintenance(oServiceCall) as ServiceReponse;
 
-            if (objResponse is Dictionary<string, string> && objResponse.ContainsKey("ErrorMessage") && !string.IsNullOrEmpty(objResponse["ErrorMessage"]))
-            {
-                RQ.IsRequested = false;
-            }
-            if (objResponse is Dictionary<string, string> && objResponse.ContainsKey("ReturnNumber") && !string.IsNullOrEmpty(objResponse["ReturnNumber"]))
+            if (objResponse is ServiceReponse && objResponse.isSuccess && !string.IsNullOrEmpty(objResponse.ReturnNumber))
             {
                 RQ.IsRequested = true;
-                RQ.RequestReffNo = objResponse["ReturnNumber"];
+                RQ.RequestReffNo = objResponse.ReturnNumber;
             }
-            return View(@"~\Views\Maintenance\MaintenanceSummary.cshtml", objResponse);
+            return View(@"~\Views\Maintenance\MaintenanceSummary.cshtml", RQ);
         }
     }
 }

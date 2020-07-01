@@ -41,7 +41,7 @@ namespace ARMvc.Controllers
                         TransferRefrence = objResponse.PayReference
                     });
                 }
-                Dictionary<string, string> paySaveRsp = await Connector.PayRentDue(oIncomingPay) as Dictionary<string, string>;
+                RentPayResponseModel paySaveRsp = await Connector.PayRentDue(oIncomingPay) as RentPayResponseModel;
             }
 
             return View(@"~\Views\Rent\PayReciept.cshtml", objResponse);

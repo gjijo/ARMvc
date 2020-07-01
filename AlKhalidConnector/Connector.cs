@@ -60,9 +60,9 @@ namespace AlKhalidConnector
             return await Task.FromResult(objRentH);
         }
 
-        public static async Task<Dictionary<string, string>> PayRentDue(PaymentHistoryModel Invoices)
+        public static async Task<RentPayResponseModel> PayRentDue(PaymentHistoryModel Invoices)
         {
-            Dictionary<string, string> objRentRsp = HttpClientRQHandler.SendRQ<Dictionary<string, string>, PaymentHistoryModel>(Invoices, "/IncomingPayments");
+            RentPayResponseModel objRentRsp = HttpClientRQHandler.SendRQ<RentPayResponseModel, PaymentHistoryModel>(Invoices, "/IncomingPayments");
             return await Task.FromResult(objRentRsp);
         }
 
@@ -70,9 +70,9 @@ namespace AlKhalidConnector
         {
             return await Task.FromResult(new ConnectorResponseModel());
         }
-        public static async Task<Dictionary<string, string>> RequestMaintenance(ServiceCallDataResponseResult RQ)
+        public static async Task<ServiceReponse> RequestMaintenance(ServiceCallDataResponseResult RQ)
         {
-            Dictionary<string, string> objRentRsp = HttpClientRQHandler.SendRQ<Dictionary<string, string>, ServiceCallDataResponseResult>(RQ, "/ServiceCall");
+            ServiceReponse objRentRsp = HttpClientRQHandler.SendRQ<ServiceReponse, ServiceCallDataResponseResult>(RQ, "/ServiceCall");
             return await Task.FromResult(objRentRsp);
         }
 

@@ -58,13 +58,13 @@ namespace ARMvc.Controllers
         {
             if (Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName == "ar")
             {
-                url = url.Replace("/ar/", "/en/");
+                url = url.Replace("/en/", "/ar/");
                 Thread.CurrentThread.CurrentUICulture = new CultureInfo("en-GB");
                 Thread.CurrentThread.CurrentCulture = new CultureInfo("en-GB");
             }
             else
             {
-                url = url.Replace("/en/", "/ar/");
+                url = url.Replace("/ar/", "/en/");
                 Thread.CurrentThread.CurrentUICulture = new CultureInfo("ar-SA");
                 Thread.CurrentThread.CurrentCulture = new CultureInfo("ar-SA");
             }

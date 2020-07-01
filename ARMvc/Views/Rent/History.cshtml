@@ -1,4 +1,4 @@
-﻿@using ARMvc.Helpers; 
+﻿@using ARMvc.Helpers;
 <div class="Hist_Transac RentContainer">
     <div class="container">
         <h3>@Html.Resource("PaymentHistory")</h3>
@@ -11,13 +11,15 @@
                 <div class="col-md-2">@Html.Resource("DocTotal")</div>
                 <div class="col-md-2">@Html.Resource("Status")</div>
             </div>
-            <div class="row" data-bind="foreach: HistoryInvoice">
-                <div class="col-md-2" data-bind="text: DocEntryNo"></div>
-                <div class="col-md-2" data-bind="text: DocNumber"></div>
-                <div class="col-md-2" data-bind="text: strDocDate"></div>
-                <div class="col-md-2" data-bind="text: strDueDate"></div>
-                <div class="col-md-2" data-bind="text: DocTotal"></div>
-                <div class="col-md-2" data-bind="text: DocStatus == '1' ? '@Html.Resource("UnPaid")' : '@Html.Resource("Paid")'"></div>
+            <div class="" data-bind="foreach: DueInvoice">
+                <div class="row">
+                    <div class="col-md-2" data-bind="text: DocEntryNo"></div>
+                    <div class="col-md-2" data-bind="text: DocNumber"></div>
+                    <div class="col-md-2" data-bind="text: strDocDate"></div>
+                    <div class="col-md-2" data-bind="text: strDueDate"></div>
+                    <div class="col-md-2" data-bind="text: DocTotal"></div>
+                    <div class="col-md-2" data-bind="text: DocStatus == '1' ? '@Html.Resource("Paid")' : '@Html.Resource("UnPaid")'"></div>
+                </div>
             </div>
         </div>
     </div>

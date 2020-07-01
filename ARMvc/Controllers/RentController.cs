@@ -24,7 +24,7 @@ namespace ARMvc.Controllers
         public async Task<ActionResult> PayRent(PaymentRequestModel RQ)
         {
             UserModel objUser = Session[SessionConstants.UserSession] as UserModel;
-            RQ.UDF1 = objUser.CardCode + "" + objUser.CardName;
+            RQ.UDF1 = objUser.CardCode + "_" + objUser.CardName;
             RQ.Culture = Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName;
 
             PaymentResponseModel objResponse = await new PaymentUtility().InitiatePayment(RQ);
