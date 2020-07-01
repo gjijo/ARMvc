@@ -13,14 +13,14 @@
 <!-- Title Section-->
 <section class="PayPage">
     <div class="InnerTittle">
-        <div class="OverLayBg d-flex align-items-center">
+        <div class="OverLayBg d-flex align-items-center RentContainer">
             <div class="container d-flex align-items-center">
                 <h2>@Html.Resource("PayRent")</h2>
             </div>
         </div>
     </div>
     <!-- Rent Section-->
-    <div class="DeatailsSec">
+    <div class="DeatailsSec RentContainer">
         <div class="container">
             <div class="TableBox">
                 <div class="row HeadRow">
@@ -32,14 +32,16 @@
                     <div class="col-md-2">@Html.Resource("DocTotal")</div>
                     <div class="col-md-2">&nbsp;</div>
                 </div>
-                <div class="row" data-bind="foreach: DueInvoice">
-                    <div class="col-md-1" data-bind="text: DocEntryNo"></div>
-                    <div class="col-md-2" data-bind="text: DocNumber"></div>
-                    <div class="col-md-1" data-bind="text: strDocMonth"></div>
-                    <div class="col-md-2" data-bind="text: strDocDate"></div>
-                    <div class="col-md-2" data-bind="text: strDueDate"></div>
-                    <div class="col-md-2" data-bind="numericText: DocTotal, positions: 3"></div>
-                    <div class="col-md-2"><span data-bind="click: $parent.addInvoice, text: IsSelected() ? '@Html.Resource("Deselect")' : '@Html.Resource("Select")', css: {'selected' : IsSelected}"></span></div>
+                <div class="" data-bind="foreach: DueInvoice">
+                    <div class="row">
+                        <div class="col-md-1" data-bind="text: DocEntryNo"></div>
+                        <div class="col-md-2" data-bind="text: DocNumber"></div>
+                        <div class="col-md-1" data-bind="text: strDocMonth"></div>
+                        <div class="col-md-2" data-bind="text: strDocDate"></div>
+                        <div class="col-md-2" data-bind="text: strDueDate"></div>
+                        <div class="col-md-2" data-bind="numericText: DocTotal, positions: 3"></div>
+                        <div class="col-md-2"><span data-bind="click: $parent.addInvoice, text: IsSelected() ? '@Html.Resource("Deselect")' : '@Html.Resource("Select")', css: {'selected' : IsSelected}"></span></div>
+                    </div>
                 </div>
             </div>
         </div>

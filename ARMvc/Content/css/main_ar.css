@@ -154,8 +154,8 @@ button:hover {
   text-align: left;
   position: absolute;
   top: 14px;
-  right: -105px;
-  width: 80px;
+  right: -125px;
+  width: 100px;
 
 }
 .input100 {
@@ -273,12 +273,22 @@ input.input100 {
 }
 @media (max-width: 576px) {
   .login100-form {
-    padding: 43px 117px 57px 15px;
+    padding: 43px 20px 57px 15px;
+  }
+  .label-input100{
+      display:none;
   }
 }
 @media (max-width: 480px) {
   .login100-form {
     padding: 43px 15px 57px 15px;
+  }
+  .login100-form-title-1{
+      font-size:20px;
+  }
+  a:not([href]):not([tabindex]).CultrChangeLogin{
+      margin-top:15px;
+      margin-bottom:15px;
   }
   .label-input100 {
     text-align: right;
@@ -287,6 +297,9 @@ input.input100 {
     right: unset;
     width: 100%;
     padding: 0 5px;
+  }
+  .login100-form-title{
+      padding:40px 15px 40px 15px
   }
 }
 .validate-input {

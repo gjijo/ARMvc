@@ -108,12 +108,12 @@ p {
 	margin-top: 5px;
 }
 
-header.page-header{
+header.page-header {
 	width: 100%;
 	height: 80px;
 	display: flex;
-	position:fixed;
-	top:0;
+	position: absolute;
+	top: 0;
 	align-items: center;
 	background: rgba(0, 0, 0, 0.3);
 	z-index: 10;
@@ -142,6 +142,8 @@ header.page-header{
 .menu{
 	display: flex;
 	flex-wrap: wrap;
+	align-items:center;
+	justify-content:flex-end;
 }
 .menu li a, .menu li a:not([href]):not([tabindex]){
 	line-height: 50px;
@@ -358,7 +360,7 @@ header.page-header{
 	width: 100%;
 }
 .InnerTittle {
-	height: 230px;
+	height: 190px;
 	width: 100%;
 	background: url(../images/slider-slide-1.jpg) no-repeat top center;
 	background-size: cover;
@@ -594,7 +596,7 @@ footer ul li.active a, footer ul li a:hover{
 }
 footer ul li p{
 	opacity: .6;
-
+}
 /*CSS lOADER START*/
 .overlay {
     position: fixed;
@@ -1051,4 +1053,116 @@ a:not([href]):not([tabindex]).CultrChangeLogin {
 }
 a:not([href]):not([tabindex]).CultrChangeLogin:hover {
     color: #d2ac67;
+}
+.MobTopMenu{
+	display: none;
+}
+@media (max-width: 1090px) {
+	.logo img{
+		width:50px;
+	}
+	.logo span{
+		font-size:50px;
+	}
+}
+@media (max-width: 991px) {
+	.MobTopMenu {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		height: 100%;
+	}
+	.MobTopMenu img{
+		max-width:50px;
+	}
+	ul.menu {
+		position: fixed;
+		width: 240px;
+		top: 0;
+		left: -240px;
+		background: rgba(0,0,0,.8);
+		height: 100%;
+		transition: all ease 0.5s;
+		-o-transition: all ease 0.5s;
+		-webkit-transition: all ease 0.5s;
+		z-index: 1005;
+		-webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.4);
+		-moz-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.4);
+		box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.4);
+		overflow-y: auto;
+		display: block;
+	}
+	.show_menu body{
+		overflow: hidden;
+	}
+	.show_menu ul.menu {
+		left: 0;
+	}
+	.show_menu .MenuOverlay {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(0, 0, 0, 0.3);
+		z-index: 1001;
+	}
+	.RentContainer .container{
+		max-width:95%;
+	}
+}
+@media (max-width: 575px) {
+	.sectionBanner .CtaText{
+		padding:25px;
+	}
+	.sectionBanner .CtaText h1 {
+		font-size: 25px;
+	}
+	.TableBox .row.HeadRow {
+		display: none;
+	}
+	.TableBox .row > div {
+		border-bottom: 2px solid #ebeeef;
+	}
+	.TableBox .row {
+		margin-bottom: 20px;
+	}
+	.TableBox .row:last-child{
+		margin-bottom:0;
+	}
+}
+@media (max-width: 479px) {
+	.logo img{
+		width:40px;
+	}
+	.logo span{
+		font-size:40px;
+	}
+	.MobTopMenu img{
+		max-width:40px;
+	}
+	.sectionBanner .CtaText h1 {
+		font-size: 18px;
+	}
+	.sectionBanner .CtaText p{
+		font-size:13px;
+	}
+	footer ul li a, footer ul li p {
+		font-size: 11px;
+	}
+}
+@media (max-width: 380px) {
+	.MaintDetails div.d-flex{
+		flex-wrap:wrap;
+	}
+	.MaintDetails label {
+		width: 100%;
+		margin-bottom: 15px;
+	}
+	.MaintDetails input[type="text"]{
+		width:100%;
+	}
+	.InnerTittle h2{
+		font-size:22px;
+	}
 }

@@ -7,7 +7,7 @@
 <header class="page-header">
     <div class="container-fluid">
         <div class="row align-item-center">
-            <div class="col-md-4">
+            <div class="col-lg-4 col-md-8 col-sm-9 col-10">
                 <div class="LogWidth" onclick="window.location.href='@Url.Action("Index", "Home")'">
                     <div class="logo">
                         <img src="~/Content/images/al_khalid-logo.png" >
@@ -15,8 +15,12 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-8">
-                <ul class="menu d-flex justify-content-end align-item-center">
+            <div class="col-lg-8 col-md-4 col-sm-3 col-2">
+                <div class="MobTopMenu">
+                    <span><i><img src="~/Content/images/Mob_menu.png"></i></span>
+                </div>
+                <div class="MenuOverlay"></div>
+                <ul class="menu">
                     <li class="active"><a href="@Url.Action("Index", "Home")">@Html.Resource("Home")</a></li>
                     <li><a href="@Url.Action("Index", "Maintenance")">@Html.Resource("MaintenanceRequest")</a></li>
                     <li><a href="@Url.Action("Index", "Rent")">@Html.Resource("PayRent")</a></li>

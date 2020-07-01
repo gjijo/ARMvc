@@ -271,12 +271,22 @@ input.input100 {
 }
 @media (max-width: 576px) {
   .login100-form {
-    padding: 43px 15px 57px 117px;
+    padding: 43px 15px 57px 20px;
+  }
+  .label-input100{
+      display:none;
   }
 }
 @media (max-width: 480px) {
   .login100-form {
     padding: 43px 15px 57px 15px;
+  }
+  .login100-form-title-1{
+      font-size:20px;
+  }
+  a:not([href]):not([tabindex]).CultrChangeLogin{
+      margin-top:15px;
+      margin-bottom:15px;
   }
   .label-input100 {
     text-align: left;
@@ -285,6 +295,9 @@ input.input100 {
     left: unset;
     width: 100%;
     padding: 0 5px;
+  }
+  .login100-form-title{
+      padding:40px 15px 40px 15px
   }
 }
 .validate-input {
