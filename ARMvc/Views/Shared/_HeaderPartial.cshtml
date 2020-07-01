@@ -1,4 +1,8 @@
 ﻿@using ARMvc.Helpers;
+@{ 
+    AlKhalidModels.UserModel objUser = Session[AlKhalidRentalsClient.Helpers.SessionConstants.UserSession] as AlKhalidModels.UserModel;
+    string branchName = objUser.CardCode + "-" + objUser.CardName;
+}
 <!-- Page Header-->
 <header class="page-header">
     <div class="container-fluid">

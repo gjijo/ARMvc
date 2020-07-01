@@ -1,0 +1,10 @@
+﻿@model AlKhalidModels.AnnouncementData
+@{
+    Layout = null;
+}
+
+@if (Model != null && !string.IsNullOrEmpty(Model.AnnDescription))
+{
+    <h1>@Model.AnnDescription</h1>
+    <p>@Model.AnnDescription</p>
+}

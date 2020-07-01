@@ -26,7 +26,7 @@
                 </div>
                 <div class="d-flex align-items-center mb-4">
                     <label>@Html.Resource("Message")<span class="Required">*</span></label>
-                    <textarea placeholder="Enter Message" name="Subject"></textarea>
+                    <textarea placeholder="@Html.Resource("EnterMessage")" name="Subject"></textarea>
                 </div>
                 <div class="d-flex align-items-center mb-4">
                     <button onclick="fnShowLoader();">@Html.Resource("SubmitRequest")</button>

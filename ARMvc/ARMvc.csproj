@@ -197,6 +197,7 @@
     <None Include="Connected Services\KnetService\KNETService2.xsd">
       <SubType>Designer</SubType>
     </None>
+    <Content Include="Scripts\ChangePassword.js" />
     <Content Include="Scripts\Account.js" />
     <Content Include="Scripts\AllPage.js" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -227,6 +228,8 @@
     <Content Include="Views\Shared\_FooterPartial.cshtml" />
     <Content Include="Views\Shared\_HeaderPartial.cshtml" />
     <Content Include="Views\Maintenance\MaintenanceSummary.cshtml" />
+    <Content Include="Views\Home\Announcements.cshtml" />
+    <Content Include="Views\Account\ChangePassword.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

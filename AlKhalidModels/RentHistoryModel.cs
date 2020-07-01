@@ -1,24 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Text;
 
 namespace AlKhalidModels
 {
     public class RentHistory : ConnectorResponseModel
     {
-        public Companyresult CompanyResult { get; set; }
-        public Responsestatus ResponseStatus { get; set; }
+        public CompanyResult CompanyResult { get; set; }
+        public ResponseStatus ResponseStatus { get; set; }
         public Result Result { get; set; }
     }
 
-    public class Companyresult
+    public class CompanyResult
     {
         public object Exception { get; set; }
         public object _Connection { get; set; }
         public bool isConnected { get; set; }
     }
 
-    public class Responsestatus
+    public class ResponseStatus
     {
         public int ResponseCode { get; set; }
         public string ResponseDescription { get; set; }
@@ -39,7 +40,8 @@ namespace AlKhalidModels
         public int BranchID { get; set; }
         public string CardCode { get; set; }
         public string CardName { get; set; }
-        public string strDocDate { get { return DocDate.ToString("dd/MM/yyyy"); } }
+        public string strDocDate { get { return DocDate.ToString("dd/MM/yyyy", new CultureInfo("en-US")); } }
+        public string strDocMonth { get { return DocDate.ToString("MMMM", new CultureInfo("en-US")); } }
         public DateTime DocDate { get; set; }
         public string DocEntryNo { get; set; }
         public string DocNumber { get; set; }
@@ -47,7 +49,8 @@ namespace AlKhalidModels
         public string DocTotal { get; set; }
         public bool IsSelected { get; set; }
         public DateTime DueDate { get; set; }
-        public string strDueDate { get { return DueDate.ToString("dd/MM/yyyy"); } }
+        public string strDueDate { get { return DueDate.ToString("dd/MM/yyyy", new CultureInfo("en-US")); } }
+        public string strDueMonth { get { return DueDate.ToString("MMMM", new CultureInfo("en-US")); } }
     }
 }
 

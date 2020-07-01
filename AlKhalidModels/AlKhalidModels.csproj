@@ -50,6 +50,7 @@
     <Compile Include="PaymentResponseModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RentHistoryModel.cs" />
+    <Compile Include="ResetPassword.cs" />
     <Compile Include="UserModel.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

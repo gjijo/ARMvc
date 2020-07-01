@@ -29,9 +29,19 @@ namespace AlKhalidConnector
             return await Task.FromResult(objUser);
         }
 
+
+        public static async Task<ConnectorResponseModel> ResetPassword(ResetPassword user)
+        {
+            ResetPasswordDataResponse objRPasswordR = HttpClientRQHandler.SendRQ<ResetPasswordDataResponse, ResetPassword>(user, "/ResetPassword");
+            if (!(objRPasswordR is ResetPasswordDataResponse && objRPasswordR.ResponseStatus.ResponseCode == (int)ResponseCode.Success))
+            {
+                objRPasswordR = null;
+            }
+            return await Task.FromResult(objRPasswordR);
+        }
+
         public static async Task<ConnectorResponseModel> GetRentHistory(UserModel user)
         {
-
             RentHistory objRentH = HttpClientRQHandler.SendRQ<RentHistory, UserModel>(user, "/GetPaidInvoices");
             if (!(objRentH is RentHistory && objRentH.ResponseStatus.ResponseCode == (int)ResponseCode.Success))
             {
@@ -68,30 +78,7 @@ namespace AlKhalidConnector
 
         public static async Task<ConnectorResponseModel> GetAnnouncements(UserModel user)
         {
-            AnnouncementModel objAnnouncement = new AnnouncementModel()
-            {
-                History = new List<AnnouncementHistory>()
-                {
-                    new AnnouncementHistory()
-                    {
-                        AnnouncementID = 1,
-                        AnnouncementText = "Announcement One : Test Test Test Test",
-                        Link = "https://www.instapaper.com/browse"
-                    },
-                    new AnnouncementHistory()
-                    {
-                        AnnouncementID = 2,
-                        AnnouncementText = "Announcement Two : Test Test Test Test",
-                    },
-                    new AnnouncementHistory()
-                    {
-                        AnnouncementID = 3,
-                        AnnouncementText = "Announcement Three : Test Test Test Test",
-                        Link = "https://www.instapaper.com/browse"
-                    },
-                }
-            };
-            objAnnouncement.History.AddRange(objAnnouncement.History);
+            AnnouncementDataResponse objAnnouncement = HttpClientRQHandler.SendRQ<AnnouncementDataResponse, UserModel>(user, "/GetAnnouncement");
             return await Task.FromResult(objAnnouncement);
         }
     }

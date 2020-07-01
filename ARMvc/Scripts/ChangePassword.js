@@ -1,13 +1,14 @@
 ﻿var LoginProvider = function () {
     var self = this;
     self.UserName = "";
-    self.Password = "";
+    self.UserPassword = "";
+    self.NewPassword = "";
     self.HomeURL = "";
 
     self.loginSubmit = function () {
         fnShowLoader();
         $.ajax({
-            url: $("#LoginURL").val(),
+            url: $("#ForgotPURL").val(),
             type: "POST",
             data: ko.toJSON(self),
             contentType: "application/json; charset=utf-8",
@@ -25,7 +26,7 @@
     };
 
     self.loginValidate = function () {
-        if (self.UserName !== "" && self.Password !== "")
+        if (self.UserName !== "" && self.UserPassword !== "" && self.NewPassword !== "")
             return true;
         return false;
     };

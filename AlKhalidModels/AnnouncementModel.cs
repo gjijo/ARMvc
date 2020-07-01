@@ -4,15 +4,17 @@ using System.Text;
 
 namespace AlKhalidModels
 {
-    public class AnnouncementModel : ConnectorResponseModel
+    public class AnnouncementDataResponse : ConnectorResponseModel
     {
-        public List<AnnouncementHistory> History { get; set; }
+        public string ErrorMessage { get; set; }
+        public AnnouncementData GetAnnouncementData { get; set; }
+        public bool HasData { get; set; }
+        public bool isSuccess { get; set; }
     }
 
-    public class AnnouncementHistory
+    public class AnnouncementData
     {
-        public long AnnouncementID { get; set; }
-        public string AnnouncementText { get; set; }
-        public string Link { get; set; }
+        public string AnnCode { get; set; }
+        public string AnnDescription { get; set; }
     }
 }
