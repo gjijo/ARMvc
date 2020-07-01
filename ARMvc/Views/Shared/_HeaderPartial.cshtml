@@ -16,8 +16,8 @@
                     <li class="active"><a href="@Url.Action("Index", "Home")">@Html.Resource("Home")</a></li>
                     <li><a href="@Url.Action("Index", "Maintenance")">@Html.Resource("MaintenanceRequest")</a></li>
                     <li><a href="@Url.Action("Index", "Rent")">@Html.Resource("PayRent")</a></li>
-                    <li><a onclick="return fnChangeCulture('@Request.Url.AbsoluteUri');">@Html.Resource("Language")</a></li>
                     <li><a href="@Url.Action("SignOut", "Account")">@Html.Resource("Logout")</a></li>
+                    <li><a onclick="return fnChangeCulture('@Request.Url.AbsoluteUri');">@Html.Resource("Language")</a></li>
                 </ul>
             </div>
         </div>
