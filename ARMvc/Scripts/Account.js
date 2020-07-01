@@ -13,10 +13,11 @@
             contentType: "application/json; charset=utf-8",
             async: false,
             success: function (result) {
-                if (result.Status && result.Data) {
+                if (result.Status && result.Data && result.Data.IsLoggedIn) {
                     location.href = document.getElementById('HomeURL').value;
                 }
                 else {
+                    $('.err-msg').css('visibility', 'visible');
                     fnHideLoader();
                 }
             }
@@ -39,3 +40,6 @@ function fnChangeCulture(absURL) {
     });
     return false;
 }
+$(document).on('blur', '.err-val-ctrl', function () {
+    $('.err-msg').css('visibility', 'hidden');
+});

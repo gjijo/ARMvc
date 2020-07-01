@@ -1,0 +1,8 @@
+﻿@model AlKhalidModels.GetAnnouncement
+
+@if (Model != null && !string.IsNullOrEmpty(Model.AnnDescription))
+{
+    <span>@Model.AnnDescription</span>
+}
+
+

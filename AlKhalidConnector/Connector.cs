@@ -68,30 +68,7 @@ namespace AlKhalidConnector
 
         public static async Task<ConnectorResponseModel> GetAnnouncements(UserModel user)
         {
-            AnnouncementModel objAnnouncement = new AnnouncementModel()
-            {
-                History = new List<AnnouncementHistory>()
-                {
-                    new AnnouncementHistory()
-                    {
-                        AnnouncementID = 1,
-                        AnnouncementText = "Announcement One : Test Test Test Test",
-                        Link = "https://www.instapaper.com/browse"
-                    },
-                    new AnnouncementHistory()
-                    {
-                        AnnouncementID = 2,
-                        AnnouncementText = "Announcement Two : Test Test Test Test",
-                    },
-                    new AnnouncementHistory()
-                    {
-                        AnnouncementID = 3,
-                        AnnouncementText = "Announcement Three : Test Test Test Test",
-                        Link = "https://www.instapaper.com/browse"
-                    },
-                }
-            };
-            objAnnouncement.History.AddRange(objAnnouncement.History);
+            GetAnnouncementDataResponse objAnnouncement = HttpClientRQHandler.SendRQ<GetAnnouncementDataResponse, UserModel>(user, "/ServiceCall");
             return await Task.FromResult(objAnnouncement);
         }
     }

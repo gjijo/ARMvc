@@ -45,7 +45,12 @@ namespace ARMvc.Controllers
         {
             UserModel objUser = Session[SessionConstants.UserSession] as UserModel;
             RentHistory objInvoices = await Connector.GetRentDues(objUser) as RentHistory;
-            return Json(new ResponseModel() { Status = false, Data = objInvoices.Result.InvoicesData, Errors = null }, JsonRequestBehavior.AllowGet);
+            List<Invoicesdata> lsInvoices = new List<Invoicesdata>();
+            if (objInvoices != null && objInvoices.Result != null && objInvoices.Result.InvoicesData != null)
+            {
+                lsInvoices = objInvoices.Result.InvoicesData.ToList();
+            }
+            return Json(new ResponseModel() { Status = false, Data = lsInvoices, Errors = null }, JsonRequestBehavior.AllowGet);
         }
 
         [HttpGet]
@@ -53,7 +58,12 @@ namespace ARMvc.Controllers
         {
             UserModel objUser = Session[SessionConstants.UserSession] as UserModel;
             RentHistory objInvoices = await Connector.GetRentHistory(objUser) as RentHistory;
-            return Json(new ResponseModel() { Status = false, Data = objInvoices.Result.InvoicesData, Errors = null }, JsonRequestBehavior.AllowGet);
+            List<Invoicesdata> lsInvoices = new List<Invoicesdata>();
+            if (objInvoices != null && objInvoices.Result != null && objInvoices.Result.InvoicesData != null)
+            {
+                lsInvoices = objInvoices.Result.InvoicesData.ToList();
+            }
+            return Json(new ResponseModel() { Status = false, Data = lsInvoices, Errors = null }, JsonRequestBehavior.AllowGet);
         }
     }
 }

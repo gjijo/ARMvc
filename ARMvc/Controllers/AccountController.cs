@@ -24,7 +24,8 @@ namespace ARMvc.Controllers
         public async Task<ActionResult> SignIn(UserModel userDetails)
         {
             UserModel objUser = await Connector.Authenticate(userDetails) as UserModel;
-            Session[SessionConstants.UserSession] = objUser;
+            if (objUser != null && objUser.IsLoggedIn)
+                Session[SessionConstants.UserSession] = objUser;
             return Json(new ResponseModel() { Status = true, Data = objUser, Errors = null });
         }
 

@@ -26,7 +26,7 @@
                 <div class="row HeadRow">
                     <div class="col-md-1">@Html.Resource("EntryNo")</div>
                     <div class="col-md-2">@Html.Resource("DocNumber")</div>
-                    <div class="col-md-1">@Html.Resource("Status")</div>
+                    <div class="col-md-1">@Html.Resource("Month")</div>
                     <div class="col-md-2">@Html.Resource("DocDate")</div>
                     <div class="col-md-2">@Html.Resource("DueDate")</div>
                     <div class="col-md-2">@Html.Resource("DocTotal")</div>
@@ -35,10 +35,10 @@
                 <div class="row" data-bind="foreach: DueInvoice">
                     <div class="col-md-1" data-bind="text: DocEntryNo"></div>
                     <div class="col-md-2" data-bind="text: DocNumber"></div>
-                    <div class="col-md-1" data-bind="text: DocStatus"></div>
+                    <div class="col-md-1" data-bind="text: strDocMonth"></div>
                     <div class="col-md-2" data-bind="text: strDocDate"></div>
                     <div class="col-md-2" data-bind="text: strDueDate"></div>
-                    <div class="col-md-2" data-bind="text: DocTotal"></div>
+                    <div class="col-md-2" data-bind="numericText: DocTotal, positions: 3"></div>
                     <div class="col-md-2"><span data-bind="click: $parent.addInvoice, text: IsSelected() ? '@Html.Resource("Deselect")' : '@Html.Resource("Select")', css: {'selected' : IsSelected}"></span></div>
                 </div>
             </div>
