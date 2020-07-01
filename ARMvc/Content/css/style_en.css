@@ -1,4 +1,15 @@
 ﻿@charset "UTF-8";
+@font-face {
+	font-family: 'DroidKufiBold';
+	src: url("../font/DroidKufiBold.eot");
+	src: url("../font/DroidKufiBold.eot") format("embedded-opentype"), url("../font/DroidKufiBold.woff2") format("woff2"), url("../font/DroidKufiBold.woff") format("woff"), url("../font/DroidKufiBold.ttf") format("truetype"), url("../font/DroidKufiBold.svg#DroidKufiBold") format("svg");
+}
+
+@font-face {
+	font-family: 'DroidKufiRegular';
+	src: url("../font/DroidKufiRegular.eot");
+	src: url("../font/DroidKufiRegular.eot") format("embedded-opentype"), url("../font/DroidKufiRegular.woff2") format("woff2"), url("../font/DroidKufiRegular.woff") format("woff"), url("../font/DroidKufiRegular.ttf") format("truetype"), url("../font/DroidKufiRegular.svg#DroidKufiRegular") format("svg");
+}
 a:focus,
 button:focus {
 	outline: none !important;
@@ -24,7 +35,7 @@ html p a:hover {
 	text-decoration: none;
 }
 body {
-	font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	font-family: "Poppins", sans-serif, "DroidKufiRegular", sans-serif;
 	font-size: 14px;
 	line-height: 1.57143;
 	font-weight: 400;
@@ -95,15 +106,18 @@ p {
 	margin-top: 5px;
 }
 
-header.page-header{
+header.page-header {
 	width: 100%;
 	height: 80px;
 	display: flex;
+	position: fixed;
+	top: 0;
 	align-items: center;
-	background: #fff;
+	background: rgba(0, 0, 0, 0.3);
+	z-index: 10;
 }
 .LogWidth{
-	width:328px;
+	width:335px;
 	max-width:100%;
 	cursor:pointer;
 }
@@ -131,7 +145,7 @@ header.page-header{
 	line-height: 50px;
 	font-size: 15px;
 	padding: 0 15px;
-	color: #000;
+	color: #f0f0f0;
 }
 .menu li a:hover, .menu li.active a, .menu li a:not([href]):not([tabindex]):hover{
 	color: #d2ac67;
@@ -153,7 +167,6 @@ header.page-header{
 .list-nav {
 	margin-bottom: -10px;
 	margin-left: -30px;
-	font-family: "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 	font-weight: 500;
 	font-size: 15px;
 	line-height: 1.2;
@@ -236,15 +249,32 @@ header.page-header{
 .context-dark .list-bordered li:not(:last-child)::after {
 	background: rgba(255, 255, 255, 0.2);
 }
+.sectionBanner {
+	width: 100%;
+	background: url(../images/slider-slide-1.jpg) no-repeat center center;
+	background-size: cover;
+}
 .Banner-slider {
 	position: relative;
 	overflow: hidden;
-	background: #002045;
 	color: #fff;
-	/*height: calc(100vh - 80px);*/
-	height: 600px;
+	height: calc(100vh - 0px);
 }
-
+.sectionBanner .CtaText {
+	width: 100%;
+	padding: 150px 80px 0px 80px;
+	text-align: center;
+}
+.sectionBanner .CtaText h1{
+	font-family: 'Rufina', serif;
+	color:#fff;
+	font-size:35px;
+}
+.sectionBanner .CtaText p{
+	font-family: 'Rufina', serif;
+	color:#fff;
+	font-size:15px;
+}
 .Banner-slider .contentSection {
 	position: absolute;
 	top: calc(50% - 200px);
@@ -328,9 +358,9 @@ header.page-header{
 	width: 100%;
 }
 .InnerTittle{
-	height: 150px;
+	height: 230px;
 	width: 100%;
-	background: url(../images/bg-01.jpg) no-repeat center center;
+	background: url(../images/slider-slide-1.jpg) no-repeat top center;
 	background-size: cover;
 }
 .OverLayBg{
@@ -338,7 +368,10 @@ header.page-header{
 	height: 100%;
 	background: rgba(0, 0, 0, 0.5);
 }
-.InnerTittle h2{
+.InnerTittle .OverLayBg{
+	padding-top:80px;
+}
+.InnerTittle h2 {
 	color: #fff;
 }
 .DeatailsSec{
@@ -721,7 +754,6 @@ footer ul li p{
 /*CSS lOADER ENDS*/
 
 .txt1 {
-  font-family: Poppins-Regular;
   font-size: 13px;
   line-height: 1.4;
   color: #999999;
@@ -769,12 +801,12 @@ footer ul li p{
   padding: 70px 15px 74px 15px;
 }
 .login100-form-title-1 {
-  font-family: Poppins-Bold;
   font-size: 30px;
   color: #fff;
   text-transform: uppercase;
   line-height: 1.2;
   text-align: center;
+  font-weight:600;
 }
 .login100-form-title::before {
   content: "";
@@ -804,7 +836,6 @@ footer ul li p{
   border-bottom: 1px solid #b2b2b2;
 }
 .label-input100 {
-  font-family: Poppins-Regular;
   font-size: 15px;
   color: #808080;
   line-height: 1.2;
@@ -816,7 +847,6 @@ footer ul li p{
 
 }
 .input100 {
-  font-family: Poppins-Regular;
   font-size: 15px;
   color: #555555;
   line-height: 1.2;
@@ -859,7 +889,6 @@ input.input100 {
   display: none;
 }
 .label-checkbox100 {
-  font-family: Poppins-Regular;
   font-size: 13px;
   color: #999999;
   line-height: 1.4;
@@ -919,7 +948,6 @@ input.input100 {
   height: 50px;
   background-color: #d2ac67;
   border-radius: 25px;
-  font-family: Poppins-Regular;
   font-size: 16px;
   color: #fff;
   line-height: 1.2;

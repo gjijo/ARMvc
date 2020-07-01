@@ -1,16 +1,27 @@
+@font-face {
+	font-family: 'DroidKufiBold';
+	src: url("../font/DroidKufiBold.eot");
+	src: url("../font/DroidKufiBold.eot") format("embedded-opentype"), url("../font/DroidKufiBold.woff2") format("woff2"), url("../font/DroidKufiBold.woff") format("woff"), url("../font/DroidKufiBold.ttf") format("truetype"), url("../font/DroidKufiBold.svg#DroidKufiBold") format("svg");
+}
+
+@font-face {
+	font-family: 'DroidKufiRegular';
+	src: url("../font/DroidKufiRegular.eot");
+	src: url("../font/DroidKufiRegular.eot") format("embedded-opentype"), url("../font/DroidKufiRegular.woff2") format("woff2"), url("../font/DroidKufiRegular.woff") format("woff"), url("../font/DroidKufiRegular.ttf") format("truetype"), url("../font/DroidKufiRegular.svg#DroidKufiRegular") format("svg");
+}
 * {
   margin: 0px; 
   padding: 0px; 
   box-sizing: border-box;
 }
 body, html {
-  height: 100%;
-  font-family: Poppins-Regular, sans-serif;
-  direction: rtl;
-  text-align: right;
+    height: 100%;
+    font-family: "DroidKufiRegular", sans-serif, "Poppins", sans-serif;
+    font-weight: 400;
+    direction: rtl;
+    text-align: right;
 }
 a {
-  font-family: Poppins-Regular;
   font-size: 14px;
   line-height: 1.7;
   color: #666666;
@@ -55,7 +66,6 @@ button:hover {
   cursor: pointer;
 }
 .txt1 {
-  font-family: Poppins-Regular;
   font-size: 13px;
   line-height: 1.4;
   color: #999999;
@@ -103,12 +113,12 @@ button:hover {
   padding: 70px 15px 74px 15px;
 }
 .login100-form-title-1 {
-  font-family: Poppins-Bold;
   font-size: 30px;
   color: #fff;
   text-transform: uppercase;
   line-height: 1.2;
   text-align: center;
+  font-weight:600;
 }
 .login100-form-title::before {
   content: "";
@@ -138,7 +148,6 @@ button:hover {
   border-bottom: 1px solid #b2b2b2;
 }
 .label-input100 {
-  font-family: Poppins-Regular;
   font-size: 15px;
   color: #808080;
   line-height: 1.2;
@@ -150,7 +159,6 @@ button:hover {
 
 }
 .input100 {
-  font-family: Poppins-Regular;
   font-size: 15px;
   color: #555555;
   line-height: 1.2;
@@ -193,7 +201,6 @@ input.input100 {
   display: none;
 }
 .label-checkbox100 {
-  font-family: Poppins-Regular;
   font-size: 13px;
   color: #999999;
   line-height: 1.4;
@@ -253,7 +260,6 @@ input.input100 {
   height: 50px;
   background-color: #d2ac67;
   border-radius: 25px;
-  font-family: Poppins-Regular;
   font-size: 16px;
   color: #fff;
   line-height: 1.2;
