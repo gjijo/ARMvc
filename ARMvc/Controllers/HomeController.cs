@@ -22,8 +22,8 @@ namespace ARMvc.Controllers
         public async Task<ActionResult> Announcements()
         {
             UserModel objUser = Session[SessionConstants.UserSession] as UserModel;
-            GetAnnouncementDataResponse objAnnouncements = await Connector.GetAnnouncements(objUser) as GetAnnouncementDataResponse;
-            GetAnnouncement anDetails = objAnnouncements != null && objAnnouncements.Result != null && objAnnouncements.Result.GetAnnouncementData != null ? objAnnouncements.Result.GetAnnouncementData : new GetAnnouncement();
+            AnnouncementDataResponse objAnnouncements = await Connector.GetAnnouncements(objUser) as AnnouncementDataResponse;
+            AnnouncementData anDetails = objAnnouncements != null && objAnnouncements != null && objAnnouncements.GetAnnouncementData != null ? objAnnouncements.GetAnnouncementData : new AnnouncementData();
             return View(anDetails);
         }
     }

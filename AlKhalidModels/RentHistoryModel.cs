@@ -7,19 +7,19 @@ namespace AlKhalidModels
 {
     public class RentHistory : ConnectorResponseModel
     {
-        public Companyresult CompanyResult { get; set; }
-        public Responsestatus ResponseStatus { get; set; }
+        public CompanyResult CompanyResult { get; set; }
+        public ResponseStatus ResponseStatus { get; set; }
         public Result Result { get; set; }
     }
 
-    public class Companyresult
+    public class CompanyResult
     {
         public object Exception { get; set; }
         public object _Connection { get; set; }
         public bool isConnected { get; set; }
     }
 
-    public class Responsestatus
+    public class ResponseStatus
     {
         public int ResponseCode { get; set; }
         public string ResponseDescription { get; set; }

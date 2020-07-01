@@ -45,8 +45,15 @@
     "UnPaid": "Not paid",
     "BackToHome": "Back to home",
     "Month": "Month",
-    "InvalidUser": "Invalid username or password!!!",
-    "EnterMessage": "Enter message"
+    "InvalidUser": "Invalid username or password !!!",
+    "EnterMessage": "Enter message",
+    "ForgotPassword": "Forgot password?",
+    "AlKhalidLoginForgotPassword": "Al-Khalid - Rest password",
+    "InvalidUserFP": "User details does not exist",
+    "EnterNewPassword": "Enter new password",
+    "NewPassword": "New password",
+    "ConfirmPassword": "Confirm password",
+    "Confirm": "Confirm"
   },
   "ar": {
     "Language": "English",
@@ -94,7 +101,14 @@
     "UnPaid": "غير مدفوع",
     "BackToHome": "العودة إلى المنزل",
     "Month": "شهر",
-    "InvalidUser": "خطأ في اسم المستخدم أو كلمة مرور!!!",
-    "EnterMessage": "أدخل رسالة"
+    "InvalidUser": "خطأ في اسم المستخدم أو كلمة مرور !!!",
+    "EnterMessage": "أدخل رسالة",
+    "ForgotPassword": "هل نسيت كلمة المرور؟",
+    "AlKhalidLoginForgotPassword": "الخالد - استعادة كلمة المرور",
+    "InvalidUserFP": "تفاصيل المستخدم غير موجودة",
+    "EnterNewPassword": "أدخل كلمة المرور الجديدة",
+    "NewPassword": "كلمة سر جديدة",
+    "ConfirmPassword": "تأكيد كلمة المرور",
+    "Confirm": "تؤكد"
   }
 }
