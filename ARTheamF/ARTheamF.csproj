@@ -8,17 +8,17 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{A213B669-55E1-4F67-9B75-61696D334162}</ProjectGuid>
+    <ProjectGuid>{25C1B5B7-908C-4BAE-8E55-1BE463F746F8}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ARMvc</RootNamespace>
-    <AssemblyName>ARMvc</AssemblyName>
+    <RootNamespace>ARTheamF</RootNamespace>
+    <AssemblyName>ARTheamF</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
-    <IISExpressSSLPort>44393</IISExpressSSLPort>
+    <IISExpressSSLPort>44320</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
@@ -45,18 +45,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AutoMapper">
-      <HintPath>..\Exports\AutoMapper.dll</HintPath>
-    </Reference>
-    <Reference Include="Mapster">
-      <HintPath>..\Exports\Mapster.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -128,87 +120,15 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
-    <Compile Include="Connected Services\KnetService\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
-    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\MaintenanceController.cs" />
-    <Compile Include="Controllers\PaymentController.cs" />
-    <Compile Include="Controllers\RentController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Helpers\CultureAttribute.cs" />
-    <Compile Include="Helpers\LCultureHelper.cs" />
-    <Compile Include="Helpers\ObjectAutoMap.cs" />
-    <Compile Include="Helpers\PaymentUtility.cs" />
-    <Compile Include="Helpers\ResourceHelper.cs" />
-    <Compile Include="Helpers\SessionConstants.cs" />
-    <Compile Include="Helpers\SessionFilter.cs" />
-    <Compile Include="Helpers\SessionHelper.cs" />
-    <Compile Include="Models\ErrorViewModel.cs" />
-    <Compile Include="Models\ResponseModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Connected Services\KnetService\ARMvc.KnetService.ResponseModel.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Areas\Admin\Views\web.config" />
-    <None Include="Connected Services\KnetService\KNETService.disco" />
-    <None Include="Connected Services\KnetService\configuration91.svcinfo" />
-    <None Include="Connected Services\KnetService\configuration.svcinfo" />
-    <None Include="Connected Services\KnetService\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <Content Include="Content\css\bootstrap.min.css" />
-    <Content Include="Content\css\bootstrap_ar.min.css" />
-    <Content Include="Content\css\main_en.css" />
-    <Content Include="Content\css\main_ar.css" />
-    <Content Include="Content\css\style_en.css" />
-    <Content Include="Content\css\style_ar.css" />
-    <Content Include="Content\css\util.css" />
-    <Content Include="Content\images\al_khalid-logo.png" />
-    <Content Include="Content\images\bg-01.jpg" />
-    <Content Include="Content\images\favicon.png" />
-    <Content Include="Content\images\Mob_menu.png" />
-    <Content Include="Content\images\slider-slide-1 - Copy.jpg" />
-    <Content Include="Content\images\slider-slide-1.jpg" />
-    <Content Include="Content\images\slider-slide-2 - Copy.jpg" />
-    <Content Include="Content\images\slider-slide-2.jpg" />
-    <Content Include="Content\images\slider-slide-3 - Copy.jpg" />
-    <Content Include="Content\images\slider-slide-3.jpg" />
-    <Content Include="Content\images\success_cross.svg" />
-    <Content Include="Content\images\success_tick.svg" />
     <Content Include="favicon.ico" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <None Include="Connected Services\KnetService\KNETService.wsdl" />
-    <None Include="Connected Services\KnetService\KNETService.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\KnetService\KNETService1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\KnetService\KNETService2.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <Content Include="Scripts\ChangePassword.js" />
-    <Content Include="Scripts\Account.js" />
-    <Content Include="Scripts\AllPage.js" />
-    <Content Include="Scripts\bootstrap.bundle.js" />
-    <Content Include="Scripts\core.min.js" />
-    <Content Include="Scripts\Home.js" />
-    <Content Include="Scripts\jquery.min.js" />
-    <Content Include="Scripts\knockout\knockout-3.5.1.js" />
-    <Content Include="Scripts\popper.min.js" />
-    <Content Include="Scripts\Rent.js" />
-    <Content Include="Scripts\script.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -220,75 +140,24 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Account\Index.cshtml" />
-    <Content Include="Views\Maintenance\Index.cshtml" />
-    <Content Include="Views\Rent\History.cshtml" />
-    <Content Include="Views\Rent\Index.cshtml" />
-    <Content Include="Views\Rent\PayReciept.cshtml" />
-    <Content Include="Views\Shared\_FooterPartial.cshtml" />
-    <Content Include="Views\Shared\_HeaderPartial.cshtml" />
-    <Content Include="Views\Maintenance\MaintenanceSummary.cshtml" />
-    <Content Include="Views\Home\Announcements.cshtml" />
-    <Content Include="Views\Account\ChangePassword.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Admin\Controllers\" />
-    <Folder Include="Areas\Admin\Views\Shared\" />
+    <Folder Include="Content\css\" />
+    <Folder Include="Content\font\" />
+    <Folder Include="Content\image\" />
+    <Folder Include="Content\js\" />
+    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="CultureFile\CultureData.json" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\KnetService\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\AlKhalidConnector\AlKhalidConnector.csproj">
-      <Project>{F609F2C3-A75F-4EE1-B985-BA658F59C9C6}</Project>
-      <Name>AlKhalidConnector</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\AlKhalidModels\AlKhalidModels.csproj">
-      <Project>{D5BED08A-F4E0-4471-8083-3B4BF27D11CB}</Project>
-      <Name>AlKhalidModels</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\AlkhalidUtility\AlkhalidUtility.csproj">
-      <Project>{A48C2551-149F-4EEA-B12C-7950B2D68E0D}</Project>
-      <Name>AlkhalidUtility</Name>
-    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
-    <DebugSymbols>true</DebugSymbols>
-    <OutputPath>bin\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <DebugType>full</DebugType>
-    <PlatformTarget>x64</PlatformTarget>
-    <LangVersion>7.3</LangVersion>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
-    <DebugSymbols>true</DebugSymbols>
-    <OutputPath>bin\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <Optimize>true</Optimize>
-    <DebugType>pdbonly</DebugType>
-    <PlatformTarget>x64</PlatformTarget>
-    <LangVersion>7.3</LangVersion>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
@@ -302,9 +171,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>52663</DevelopmentServerPort>
+          <DevelopmentServerPort>51016</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>https://localhost:44393/</IISUrl>
+          <IISUrl>https://localhost:44320/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
