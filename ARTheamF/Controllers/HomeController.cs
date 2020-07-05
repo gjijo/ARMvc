@@ -1,30 +1,42 @@
-﻿using System;
+﻿using AlKhalidConnector;
+using AlKhalidModels;
+using ARTheamF.Helpers;
+using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 
 namespace ARTheamF.Controllers
 {
+    [SessionExpiryFilter]
     public class HomeController : Controller
     {
         public ActionResult Index()
         {
             return View();
         }
-
-        public ActionResult About()
+        public ActionResult Index1()
         {
-            ViewBag.Message = "Your application description page.";
-
             return View();
         }
-
-        public ActionResult Contact()
+        public ActionResult Index2()
         {
-            ViewBag.Message = "Your contact page.";
-
             return View();
+        }
+        public ActionResult Index3()
+        {
+            return View();
+        }
+        public async Task<ActionResult> Announcements()
+        {
+            UserModel objUser = Session[SessionConstants.UserSession] as UserModel;
+            AnnouncementDataResponse objAnnouncements = await Connector.GetAnnouncements(objUser) as AnnouncementDataResponse;
+            AnnouncementData anDetails = objAnnouncements != null && objAnnouncements != null && objAnnouncements.GetAnnouncementData != null ? objAnnouncements.GetAnnouncementData : new AnnouncementData();
+            return View(anDetails);
         }
     }
 }

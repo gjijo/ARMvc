@@ -19,6 +19,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlkhalidUtility", "AlkhalidUtility\AlkhalidUtility.csproj", "{A48C2551-149F-4EEA-B12C-7950B2D68E0D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ARTheamF", "ARTheamF\ARTheamF.csproj", "{25C1B5B7-908C-4BAE-8E55-1BE463F746F8}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3114DC3C-99B0-4055-AB7E-D2B11DC905D7} = {3114DC3C-99B0-4055-AB7E-D2B11DC905D7}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

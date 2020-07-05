@@ -45,10 +45,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=7.0.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Exports\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Mapster, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2f39883af23c29a8, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Exports\Mapster.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -120,13 +130,47 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Connected Services\KnetService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MaintenanceController.cs" />
+    <Compile Include="Controllers\PaymentController.cs" />
+    <Compile Include="Controllers\RentController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\CultureAttribute.cs" />
+    <Compile Include="Helpers\LCultureHelper.cs" />
+    <Compile Include="Helpers\ObjectAutoMap.cs" />
+    <Compile Include="Helpers\PaymentUtility.cs" />
+    <Compile Include="Helpers\ResourceHelper.cs" />
+    <Compile Include="Helpers\SessionConstants.cs" />
+    <Compile Include="Helpers\SessionFilter.cs" />
+    <Compile Include="Helpers\SessionHelper.cs" />
+    <Compile Include="Models\ErrorViewModel.cs" />
+    <Compile Include="Models\ResponseModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Connected Services\KnetService\ARTheamF.KnetService.ResponseModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\KnetService\KNETService.disco" />
+    <None Include="Connected Services\KnetService\configuration91.svcinfo" />
+    <None Include="Connected Services\KnetService\configuration.svcinfo" />
+    <None Include="Connected Services\KnetService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Content\js\Custom\Account.js" />
+    <Content Include="Content\js\Custom\Common.js" />
+    <Content Include="Content\js\Custom\ChangePassword.js" />
+    <Content Include="Content\js\Custom\Home.js" />
+    <Content Include="Content\js\Custom\Rent.js" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
@@ -140,20 +184,55 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Index2.cshtml" />
+    <Content Include="Views\Home\Index3.cshtml" />
+    <Content Include="Views\Home\Index1.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\css\" />
     <Folder Include="Content\font\" />
     <Folder Include="Content\image\" />
-    <Folder Include="Content\js\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CultureFile\CultureData.json" />
+    <None Include="Connected Services\KnetService\KNETService.wsdl" />
+    <None Include="Connected Services\KnetService\KNETService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\KnetService\KNETService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\KnetService\KNETService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AlKhalidConnector\AlKhalidConnector.csproj">
+      <Project>{f609f2c3-a75f-4ee1-b985-ba658f59c9c6}</Project>
+      <Name>AlKhalidConnector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AlKhalidLogger\AlKhalidLogger.csproj">
+      <Project>{6295d0f1-55da-48b8-8259-1e32ba9cd25f}</Project>
+      <Name>AlKhalidLogger</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AlKhalidModels\AlKhalidModels.csproj">
+      <Project>{d5bed08a-f4e0-4471-8083-3b4bf27d11cb}</Project>
+      <Name>AlKhalidModels</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AlkhalidUtility\AlkhalidUtility.csproj">
+      <Project>{a48c2551-149f-4eea-b12c-7950b2d68e0d}</Project>
+      <Name>AlkhalidUtility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\KnetService\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

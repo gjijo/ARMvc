@@ -42,8 +42,8 @@ namespace AlKhalidConnector
 
         public static async Task<ConnectorResponseModel> GetRentHistory(UserModel user)
         {
-            RentHistory objRentH = HttpClientRQHandler.SendRQ<RentHistory, UserModel>(user, "/GetPaidInvoices");
-            if (!(objRentH is RentHistory && objRentH.ResponseStatus.ResponseCode == (int)ResponseCode.Success))
+            PaidRentHistory objRentH = HttpClientRQHandler.SendRQ<PaidRentHistory, UserModel>(user, "/GetPaidInvoices");
+            if (!(objRentH is PaidRentHistory && objRentH.ResponseStatus.ResponseCode == (int)ResponseCode.Success))
             {
                 objRentH = null;
             }
